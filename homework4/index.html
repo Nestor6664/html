@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <fieldset>
+        <form action="#" id="my_form"
+            onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+            <div class="form-row"><label for="name">Повне ім'я</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="form-row"><label for="email">Email</label>
+                <input type="email" name="email">
+            </div>
+            <div class="form-row"><label for="password">Пароль</label>
+                <input type="password" name="pass">
+            </div>
+            <div class="form-row"><label for="again-password">Пароль ще раз </label>
+                <input type="text">
+            </div>
+            <div class="form-row"><label>Стать</label>
+
+                <label>
+                    <input type="radio" name="gender" value="male">Чоловіча
+                    <label>
+                        <input type="radio" name="gender" value="female">Жіноча
+                    </label>
+            </div>
+            <div class="form-row"><label for="age">Вік</label>
+                <input type="number" name="age" min="16" max="100">
+            </div>
+            <div class="form-row"><label for="cours">Курс</label>
+                <select name="cours" id="cours">
+                    <option value="front-end">Front-end</option>
+                    <option value="Data-analyst">Data-analyst</option>
+                    <option value="UI/UX-designer">UI/UX-designer</option>
+                </select>
+            </div>
+            <div class="form-row"><label for="address">Повна адреса</label>
+                <textarea name="address" id="" cols="25" rows="4"
+                    placeholder="Країна,регіон,місто/селище,вулиця"></textarea>
+            </div>
+
+            <div class="style1"> <label><input type="checkbox" name="agree" value="true">Я погоджуюсь з обробкою
+                    персональних даних</label></div>
+            <br>
+            <div class="form-row"><button type="reset">Очистити форму</button></div>
+            <div class="form-row"><button type="submit">Зареєструватися</button></div>
+        </form>
+    </fieldset>
+</body>
+
+</html>
