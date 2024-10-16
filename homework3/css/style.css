@@ -1,99 +1,180 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
 }
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.125rem;
-    color: #070707;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1.125rem;
+   color: #070707;
 }
+
 .container {
    width: min(90%, 970px);
    margin-inline: auto;
-    }
- header .container{
-    border-bottom: 1px solid #828282;
-    padding: 25px 0 24px;
- }
- 
- ul{
-    list-style: none;
- }
- .main-menu ul {
- text-align: center;
- font-size: 0;
- }
- .main-menu ul li {
-    display: inline;
-    margin: 20px;
-    font-size: 1.200rem;
- }
- .main-menu ul li a {
-    line-height: 30px;
-    text-decoration: none;
-    color: #828282;
- }
- .main-menu ul li a:hover {
-    color: #070707;
- }
- .photo {
-    margin-top: 11px;
- }
- h1{
-     font-size: 3rem;
-     margin-bottom: 50px;
- }
-.photo img{
-    vertical-align: top;
-    width: 100%;
-    object-fit: contain;
 }
+.container2{
+   margin-bottom: 39px;
+   margin-inline: auto;
+   width: min(90% 1200px);
+}
+
+
+
+
+header .container {
+   border-bottom: 1px solid #828282;
+   padding: 25px 0 24px;
+}
+
+ul {
+   list-style: none;
+}
+
+.main-menu ul {
+   text-align: center;
+   font-size: 0;
+}
+
+.main-menu ul li {
+   display: inline-block;
+   margin: 0 20px;
+   font-size: 1.200rem;
+}
+
+.main-menu ul li a {
+   line-height: 30px;
+   text-decoration: none;
+   color: #828282;
+}
+
+.main-menu ul li a:hover {
+   color: #070707;
+}
+
+.photo {
+   margin-top: 11px;
+}
+
+h1 {
+   font-size: 3rem;
+   margin-bottom: 50px;
+}
+
+.photo img {
+   vertical-align: top;
+   width: 100%;
+   object-fit: contain;
+}
+
 .text {
-    font-size: 1.5rem;
-    margin-bottom: 50px;
+   font-size: 1.5rem;
+   margin-top: 20px;
+}
+.paragraf {
+ margin: 45px;
+ 
 }
 
 .aboutme {
-    margin-top: 150px;
-    text-align: center;
+   margin-top: 94px;
+   text-align: center;
 }
 
-.Skills
-{
-    text-align: center;
-    margin-top: 150px;
+.Skills {
+   text-align: center;
+   margin-top: 217px;
 }
- .Program {
-    width: 5%;
-    display: inline-block;
-    margin: 20px
- }
- .Skillss{
-    text-align: center;
- }
- .button {
-        text-decoration: none;
-  display: inline-block;
-  width: 140px;
-  height: 45px;
-  line-height: 45px;
-  border-radius: 45px;
-  margin: 10px 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 3px;
-  font-weight: 600;
-  color: #524f4e;
-  background: white;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
-  transition: .3s;
-    }
-    .button:hover{
-        background: #2EE59D;
-        box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
-        color: white;
-        transform: translateY(-7px);
-    }
+.font h2 {
+   font-size: 2rem;
+}
+.font p {
+   margin: -8px;  
+}
+
+.Program li{
+   width: 222px;
+   display: inline-block;
+   margin: 20px;
+   color: gray;
+   font-size: 15px;
+   font-weight: bold;
+   margin-bottom: 2px;
+}
+
+.image {
+   display: inline-block;
+   margin-bottom: 20px;
+}
+
+.figma{
+   margin-bottom: 2px;
+}
+.Skillss {
+   text-align: center;
+   margin-top: 247px;
+}
+
+.button {
+   text-decoration: none;
+   display: inline-block;
+   width: 140px;
+   height: 45px;
+   line-height: 45px;
+   border-radius: 45px;
+   margin: 57px 20px;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 11px;
+   text-transform: uppercase;
+   text-align: center;
+   letter-spacing: 3px;
+   font-weight: 600;
+   color: #524f4e;
+   background: white;
+   box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+   transition: .3s;
+}
+
+.button:hover {
+   background: #2EE59D;
+   box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+   color: white;
+   transform: translateY(-7px);
+}
+.link li{
+   width: 116px;
+   display: inline-block;
+   margin: -15px
+}
+
+.stars {
+   margin-top: 54px;
+   padding: 3px;
+}
+.stars1{
+   margin-top: 54px;
+   padding: 3px;
+   opacity: .3;
+  
+}
+.container h2{
+   font-size: 2.2rem;
+
+display: block;
+}
+.reebok {
+   margin-top: 72px;
+   margin-bottom: 104px;
+
+}
+.cont{
+   text-align: center;
+   margin-top: 235px;
+}
+.Like{
+   text-align: center;
+   margin-top: 53px;
+   color: gray;
+   font-size: 14px;
+}
