@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -13,20 +13,22 @@ body{
     margin-inline: auto;
 }
 
-img{
+img {
     vertical-align: top;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
-button, a {
+button,
+a {
     cursor: pointer;
     transition: all .2s ease;
 }
 
-.btn{
+.btn {
     padding: 13px 25px;
     background-color: #f90;
     font-family: "Montserrat", sans-serif;
@@ -39,7 +41,7 @@ button, a {
     transition: 0.5s;
 }
 
-.btnstr{
+.btnstr {
     padding: 15px 43px;
     background-color: #f90;
     font-family: "Montserrat", sans-serif;
@@ -53,7 +55,7 @@ button, a {
 }
 
 
-.btn-white{
+.btn-white {
     padding: 13px 25px;
     background-color: #fff;
     font-family: "Montserrat", sans-serif;
@@ -71,8 +73,9 @@ a {
     color: #2F281E;
     text-decoration: none;
 }
+
 a:hover {
-    color: #F90 
+    color: #F90
 }
 
 header {
@@ -85,13 +88,14 @@ header .container {
     justify-content: space-between;
     align-items: center;
 }
+
 nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-button{
+button {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -102,14 +106,14 @@ button{
     gap: 56px;
 }
 
- .content h1{
+.content h1 {
     font-size: 2.75rem;
     font-weight: 700;
     line-height: 3.375rem;
     color: #2f281e;
 }
 
-.content p{
+.content p {
     color: #544837;
     font-size: 1.125rem;
     font-weight: 400;
