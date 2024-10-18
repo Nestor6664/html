@@ -25,7 +25,12 @@ ol {
 button,
 a {
     cursor: pointer;
-    transition: all .2s ease;
+    transition: all 0.3s ease;
+}
+
+.btn-white:hover{
+    transform: translate(0,-3px);
+    box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
 }
 
 .btn {
@@ -38,7 +43,11 @@ a {
     border-radius: 4px;
     border: 1px solid #f90;
     box-shadow: 0 5px 15px 0 #f90;
-    transition: 0.5s;
+}
+
+.btn:hover{
+    transform: translate(0,-3px);
+    box-shadow: 0 20px 40px 0 #F90;
 }
 
 .btnstr {
@@ -51,7 +60,11 @@ a {
     border-radius: 4px;
     border: 1px solid #f90;
     box-shadow: 0 5px 15px 0 #f90;
-    transition: 0.5s;
+     }
+
+.btnstr:hover{
+    transform: translate(0,-3px);
+    box-shadow: 0 20px 40px 0 #F90;
 }
 
 
@@ -66,7 +79,7 @@ a {
     border-radius: 4px;
     border: 1px solid #bcd0e5;
     box-shadow: 0 5px 15px 0 #bcd0e5;
-    transition: 0.5s;
+   
 }
 
 a {
@@ -93,10 +106,6 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 20px;
-}
-
-button {
-    font-family: "Montserrat", sans-serif;
 }
 
 .first-section .container {
