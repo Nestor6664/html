@@ -6,14 +6,11 @@
 
 body {
     color: white;
-    font-family:'Lucida Sans Unicode', sans-serif;
-    background: #39C;
-    border: 25px solid #2B81AC;
-    width: 100%;
+    font-family: 'Lucida Sans Unicode', sans-serif;
 }
 
-.container1{
-    margin-right: 285px;
+.container1 {
+    margin-right: 113px;
     margin-left: 110px;
     font-size: 0;
     border: 2px solid;
@@ -22,102 +19,118 @@ body {
 .container {
     width: min(90%, 1440px);
     margin-inline: auto;
-    
+    background: #39C;
+    border: 25px solid #2B81AC;
+
 }
 
-h1{
-font-size: 21px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin: 66.1px 110px 40px;
+h1 {
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 66.1px 110px 40px;
 }
 
-h1 .wi{
+h1 .wi {
     font-size: 27px;
-} 
+}
+
+ul {
+    background-color: white;
+}
 
 
-li{
+li {
     display: inline-block;
     text-align: center;
     font-size: 1.375rem;
     font-style: normal;
     font-weight: 400;
     padding-top: 26px;
-    padding-bottom: 40px;
+    padding-bottom: 23px;
     border: 2px solid;
     transition: opacity 0.3s ease;
     cursor: pointer;
 }
 
+li p {
+    padding-bottom: 15px;
+}
+
+.wi {
+    font-size: 2.6rem;
+}
+
 li:hover {
     opacity: 1;
- }
+}
 
-    li:not(:hover) {
-        opacity: 0.5; 
-    }
+li:not(:hover) {
+    opacity: 0.5;
+}
 
 
 .medium {
- width: 50%;
+    width: 50%;
 }
 
 .small {
     width: 25%;
 }
 
-.Large{
-width: 100%;
+.Large {
+    width: 100%;
 }
 
-.back-color1{
+.back-color1 {
     background-color: #3CC;
 }
- 
-.back-color0{
-    background-color: #39C;;
+
+.back-color0 {
+    background-color: #39C;
+    ;
 }
- 
-.back-color2{
+
+.back-color2 {
     background-color: #969;
 }
- 
-.back-color3{
+
+.back-color3 {
     background-color: #C24747;
 }
- 
-.back-color4{
+
+.back-color4 {
     background-color: #E2674A;
 }
- 
-.back-color5{
+
+.back-color5 {
     background-color: #FC6;
 }
- 
-.back-color6{
+
+.back-color6 {
     background-color: #9C9;
 }
- 
-.back-color7{
+
+.back-color7 {
     background-color: #699;
 }
- 
-.back-color8{
+
+.back-color8 {
     background-color: #C69;
-  }
-.back-color9{
+}
+
+.back-color9 {
     background-color: #396;
 }
- 
-.back-color10{
+
+.back-color10 {
     background-color: #669;
 }
- 
 
-.p{
+
+.p {
     line-height: normal;
-    margin:30px 110px 40px;
+    margin: 30px 110px 40px;
     margin-bottom: 85px;
 }
