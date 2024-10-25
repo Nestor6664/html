@@ -29,8 +29,7 @@ a {
 }
 
 .btn-white:hover {
-    transform: translate(0, -3px);
-    box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
+    border-color: black;
 }
 
 .btn {
@@ -42,12 +41,11 @@ a {
     color: #FFF;
     border-radius: 4px;
     border: 1px solid #f90;
-    box-shadow: 0 5px 15px 0 #f90;
+
 }
 
 .btn:hover {
-    transform: translate(0, -3px);
-    box-shadow: 0 20px 40px 0 #F90;
+    border-color: black;
 }
 
 .btnstr {
@@ -59,12 +57,11 @@ a {
     color: #FFF;
     border-radius: 4px;
     border: 1px solid #f90;
-    box-shadow: 0 5px 15px 0 #f90;
+
 }
 
 .btnstr:hover {
-    transform: translate(0, -3px);
-    box-shadow: 0 20px 40px 0 #F90;
+    border-color: black;
 }
 
 
@@ -78,8 +75,6 @@ a {
     margin-right: 32px;
     border-radius: 4px;
     border: 1px solid #bcd0e5;
-    box-shadow: 0 5px 15px 0 #bcd0e5;
-
 }
 
 a {
@@ -102,7 +97,7 @@ header .container {
     align-items: center;
 }
 
-nav ul {
+.headers ul {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -193,7 +188,8 @@ nav ul {
 
 .second-section {
     background: url("../images/bg.svg") no-repeat center bottom;
-    height: 508px;
+    background-size: cover;
+    padding-bottom: 74px
 }
 
 .contact {
