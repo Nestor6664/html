@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+.container {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+}
+ body{
+    font-family: 'pt_sansregular';
+    font-style: normal;
+ }
+
+ .head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 11px;
+    margin-bottom: 84px;
+ }
+ 
+nav ul{
+    margin-left: 58px;
+    display: flex;
+    font-family: 'staatlichesregular';
+    list-style-type: none;
+    gap: 10px;
+    font-size: 22px;
+    letter-spacing: 0.66px;
+ }
+
+ div .logo{
+    margin-left: auto;
+ }
+
+ section h2{
+font-family: "francois_oneregular";
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; /* 133.333% */
+letter-spacing: 1.44px;
+text-transform: uppercase;
+ }
+
+ section p{
+   font-size: 28px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 48px;
+   margin-top: 37px;
+ }
+
+ sup{
+    text-transform:none;
+font-family: "farrolight";
+font-size: 17px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+letter-spacing: 1.2px;
+position: relative;
+    top: -0.6em
+ }
+
+ .two-section{
+   margin-top: 61px;
+ }
+
+ .code{
+   font-family: "pt_sansitalic";
+ }
+
+ .three-section{
+  margin-top: 62px;
+ }
+
+ .three-section p {
+   margin-bottom: -6px;
+ }
+ 
+ .pt_sansbold{
+   font-family: "pt_sansbold";
+ }
+
+ .text {
+   background-color: lightgrey;
+}
+
+.react{
+   margin-top: 44px;
+}
+
+.fr-section{
+   margin-top: 66px;
+}
