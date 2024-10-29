@@ -1,0 +1,123 @@
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+.container {
+   width: min(90%, 1200px);
+   margin-inline: auto;
+}
+
+body {
+   font-family: 'pt_sansregular';
+   font-style: normal;
+}
+
+.head {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 11px;
+   margin-bottom: 81px;
+}
+
+.headder ul {
+   margin-left: 58px;
+   display: flex;
+   font-family: 'staatlichesregular';
+   list-style-type: none;
+   gap: 10px;
+   font-size: 22px;
+   letter-spacing: 0.66px;
+}
+
+.headder a {
+   color: black;
+   text-decoration: none;
+}
+
+
+div .logo {
+   margin-left: auto;
+}
+
+.text {
+   font-family: 'Helvetica Neue', sans-serif;
+   font-size: 1.4rem;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 3rem;
+   /* 133.333% */
+   letter-spacing: 0.05rem;
+   display: flex;
+   align-items: center;
+   margin-bottom:39px;
+}
+
+.text::before {
+   content: "";
+   display: inline-block;
+   width: 100px;
+   height: 8px;
+   background-color: black;
+   margin-right: 20px;
+}
+
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 30px;
+   border-top: 1px solid #BFBFBF;
+   border-bottom: 1px solid #BFBFBF;
+   padding: 20px 15px;
+}
+
+.flip-card {
+   background-color: transparent;
+   height: 180px;
+   perspective: 1000px;
+}
+
+
+.flip-card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   transition: transform 0.8s;
+   transform-style: preserve-3d;
+}
+
+
+.flip-card:hover .flip-card-inner {
+   transform: rotateY(180deg);
+}
+
+
+.flip-card-front,
+.flip-card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+   display: grid;
+   place-items: center;
+   background-color: #E6E6E6;
+   color: black;
+   border-radius: 8px;
+}
+
+
+.flip-card-back {
+   display: grid;
+   place-items: center;
+   background-color: #E6E6E6;
+   filter: invert(1);
+   transform: rotateY(180deg);
+   border-radius: 8px;
+}

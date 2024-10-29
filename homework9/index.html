@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Konstrut</title>
     <link rel="stylesheet" href="style/font.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
@@ -14,7 +14,7 @@
         <div class="container">
             <div class="head">
                 <img src="images/ENG.png" alt="">
-                <nav>
+                <nav class="headder">
                     <ul>
                         <li>
                             Documentation
@@ -22,7 +22,7 @@
                         <li>
                             /
                         </li>
-                        <li>Who's using</li>
+                        <li><a href="/homework9-1/index.html">Who's using</a></li>
                     </ul>
                 </nav>
                 <div class="logo">
@@ -31,9 +31,24 @@
             </div>
         </div>
     </header>
+    <section class="scroll">
+        <div class="container">
+            <div class="sidenav">
+                <nav>
+                    <ul>
+                        <li><a href="#1">Introduction</a></li>
+                        <li><a href="#2">core components</a></li>
+                        <li><a href="#3">react fundamentals </a></li>
+                        <li><a href="#4">handling text input</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        </section>
     <main>
         <div class="container">
-            <section class="first-section">
+            <div class="colum">
+            <section class="first-section" id="1">
                 <h2>Introduction
                     <sup>Chapter 1</sup>
                 </h2>
@@ -42,7 +57,7 @@
                     for an introduction to the documentation, Native Components, React, and more!</p>
             </section>
 
-            <section class="two-section">
+            <section class="two-section" id="2">
                 <h2>core components
                     <sup>Chapter 2</sup>
                 </h2>
@@ -54,12 +69,12 @@
                     about React in the next section. But first, let’s cover how components work in React Native.</p>
             </section>
 
-            <section class="three-section">
+            <section class="three-section" id="3">
                 <h2>react fundamentals
                     <sup>Chapter 3</sup>
                 </h2>
                 <p>React Native runs on <u>React</u>, a popular open source library for building user interfaces with
-                    <br> JavaScript. To make the most of React Native,
+                    JavaScript. To make the most of React Native,
                     it helps to understand React itself. This section can get you started or can serve as a refresher
                     course.
                 </p>
@@ -89,7 +104,7 @@
                     time or that comes from user interaction. State gives your components memory!</p>
             </section>
 
-            <section class="fr-section">
+            <section class="fr-section" id="4">
                 <h2>handling text input<sup>Chapter 4</sup></h2>
 
                 <p>TextInput is a Core Component that allows the user to enter text. It has an <span
@@ -102,6 +117,7 @@
                     language. In this new language, every single word is written the same way: 🍕. So the sentence
                     "Hello there Bob" would be translated as "🍕 🍕".</p>
             </section>
+        </div>
         </div>
     </main>
 </body>

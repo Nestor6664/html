@@ -21,7 +21,7 @@
     margin-bottom: 84px;
  }
  
-nav ul{
+.headder ul{
     margin-left: 58px;
     display: flex;
     font-family: 'staatlichesregular';
@@ -30,6 +30,7 @@ nav ul{
     font-size: 22px;
     letter-spacing: 0.66px;
  }
+
 
  div .logo{
     margin-left: auto;
@@ -66,7 +67,7 @@ position: relative;
  }
 
  .two-section{
-   margin-top: 61px;
+   margin-top: 102px;
  }
 
  .code{
@@ -74,11 +75,11 @@ position: relative;
  }
 
  .three-section{
-  margin-top: 62px;
+  margin-top: 100px;
  }
 
  .three-section p {
-   margin-bottom: -6px;
+   margin-bottom: 39px;
  }
  
  .pt_sansbold{
@@ -94,9 +95,57 @@ position: relative;
 }
 
 .rec{
-   margin-top: 29px;
+   margin-top: 40px;
+}
+
+h2{
+   position: relative; 
 }
 
 .fr-section{
-   margin-top: 66px;
+   margin-top: 100px;
 }
+
+h2:before {
+   content: ""; 
+   position: absolute; 
+   top: -30px; 
+   left: 0; 
+   width: 100px;
+   height: 8px;
+   background-color: #000000; 
+}
+
+.colum {
+   margin: -503px 0 0 auto;
+   width: 785px;
+}
+
+.scroll {
+   position: sticky;
+   top: 0;
+}
+
+.sidenav nav{
+   width: 385px;
+   padding: 8px; 
+}
+
+.sidenav a{
+   font-family: 'francois_oneregular';
+    font-size: 2.25rem;
+    line-height: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.09rem;
+    text-transform: uppercase;
+}
+
+.sidenav ul li {
+   display: flex;
+   border-bottom: 1px solid #E6E6E6;
+   margin-bottom: 79px;
+}
+a{
+   color: #000;
+    text-decoration: none;
+ }
