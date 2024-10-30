@@ -119,6 +119,11 @@ h2:before {
 .colum {
    margin: -503px 0 0 auto;
    width: 785px;
+background-image: url('/homework9/images/bg-picture.svg') ;
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-position: 85% center;
+
 }
 
 .scroll {
