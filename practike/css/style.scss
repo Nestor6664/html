@@ -1,0 +1,106 @@
+@import "fonts";
+$text-color: black;
+$bg-White: #ffffff;
+$bg-blue: #6FCFFB;
+$bg-red: #FD8D7B;
+$bg-grey: #F5F3F9;
+
+*,*::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #9789F9;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+
+    width:min(90%, 1200px);
+    margin: 0 auto;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.25rem; 
+    letter-spacing: 0.04rem;
+}
+
+ul{
+    list-style: none;
+}
+
+main{
+    padding: 120px 0;
+}
+
+.price-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.price-item{
+    background-color: $bg-grey;
+    flex-grow: 1;
+    text-align: center;
+    padding-top: 40px;
+    box-shadow: 0px 0px 20px 0px #8677EF;
+}
+
+&.popular{
+    padding-top: 50px;
+    position: relative;
+}
+
+.circle{
+    position: absolute;
+    top: 16px;
+    right: 30px;
+}
+
+.price{
+font-family: "Bebas Neue";
+font-size: 3.75rem;
+font-weight: 100;
+line-height: 3.75rem; /* 100% */
+letter-spacing: 0.3rem;
+}
+
+sup{
+    position: relative;
+    top: -4px;
+    font-size: 1.5rem;
+}
+
+sub{
+    position: relative;
+    top: -10px;
+    font-size: 1rem;
+font-weight: 300;
+line-height: 1rem;
+
+}
+
+h2{
+
+    margin-bottom: 70px;
+    font-family: "Bebas Neue";
+font-size: 1.5rem;
+font-weight: 700;
+letter-spacing: 0.6rem;
+}
+
+.icon{
+    display:inline-block;
+    margin-bottom: 40px;
+    svg{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+ul{
+    text-align: left;
+}
