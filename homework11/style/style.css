@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(90%, 1170px);
+    margin-inline: auto;
+}
+
+.header {
+    margin-left: 206px;
+    border-bottom: 1px solid #EFEEF3;
+    height: 57px;
+}
+
+.logo {
+    margin-left: 135px;
+    margin-top: 23px;
+}
+
+.headling {
+    margin: 99px 0px 34px;
+}
+
+.headling sub {
+    color: #7690A8;
+    font-family: "Roboto";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3125rem;
+    margin-bottom: 12px;
+}
+
+.headling h1 {
+    color: #16133D;
+    font-family: "Nunito";
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 3.25rem;
+    /* 130% */
+    letter-spacing: 0.0125rem;
+    padding-top: 8px;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    height: 340px;
+}
+
+.card-item h2 {
+    color: #16133D;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.33rem;
+    /* 88.667% */
+    letter-spacing: 0.0125rem;
+
+}
+
+.card-item p {
+    color: #16133D;
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.75rem;
+
+}
+
+.card-item:hover .icon svg.blue {
+    opacity: 0;
+}
+
+.card-item:hover .icon svg.green {
+    opacity: 1;
+}
+
+.box {
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #E5EAF4;
+}
+
+.icon {
+    margin-top: 9px;
+    margin-left: 9px;
+    width: 64px;
+    aspect-ratio: 1;
+    padding: 14px 12px;
+    position: relative;
+    border-radius: 16px;
+    border: 1px solid rgba(21, 101, 216, 0.1);
+}
+
+.box:hover{
+    transition: all 0.5s ease;
+    border-color: #3DB370;
+}
+
+.icon svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 36px;
+    transition: all 0.5s ease;
+}
+
+.icon svg.blue {
+    opacity: 1;
+}
+
+.icon svg.green {
+    opacity: 0;
+}
+
+.text {
+    margin-left: 10px;
+    margin-top: 31px;
+}
+
+.text h2 {
+    margin-bottom: 16px;
+}
+
+.text p {
+    margin-bottom: 24px;
+}
+
+.text a {
+    font-family: 'Roboto';
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
+    color: #007FFC;
+}
+
+.text a:hover{
+    transition: all .5s ease;
+    color: #3DB370;
+}
+
+.footer{
+    margin-top: 100px;
+    width: min(90%, 1440px);
+    margin-inline: auto;
+    background-color: #16133D;
+}
