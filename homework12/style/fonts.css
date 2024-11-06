@@ -1,0 +1,33 @@
+@font-face {
+    font-display: swap; 
+    font-family: 'Roboto-Black';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/Roboto-Black.woff2') format('woff2'); 
+  }
+
+  @font-face {
+    font-family: 'Raleway-med';
+    font-display: swap; 
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Raleway-Medium.woff2') format('woff2'); 
+    font-style: normal;
+  }
+
+  @font-face {
+    font-display: swap; 
+    font-family: 'Roboto-reg';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v32-latin-regular.woff2') format('woff2'); 
+  }
+
+  @font-face {
+    font-family: 'Raleway-reg';
+    font-display: swap; 
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Raleway-Regular.woff2') format('woff2'); 
+    font-style: normal;
+  }
