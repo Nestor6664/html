@@ -9,7 +9,23 @@
     <link rel="stylesheet" href="aset/css/style.css">
 </head>
 
-<body>
+<body class="open-mobile-menu">
+
+ <div class="page-shadow show " onclick="document.body.classList.toggle('open-mobile-menu')"></div>
+<div class="mobile-panel open">
+    <nav class="mobile-menu">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+    </nav>
+</div>
+    <div class="page-wrapper">
+
+    
     <header>
         <div class="container">
             <div class="logo">
@@ -26,8 +42,12 @@
             </nav>
             <div class="buttons">
                 <button type="button"><img src="aset/images/search-icon.svg" alt=""></button>
-                <button type="button" class="hamburger"><img src="" alt=""></button>
             </div>
+
+            <div class="hamburger">
+                <button type="button" class="hamb-btn" onclick="document.body.classList.toggle('open-mobile-menu')"><span></span></button>
+            </div>
+
         </div>
     </header>
     <main>
@@ -45,14 +65,17 @@
                     </div>
                     <div class="box-r">
                         <div class="box-text">
-                           <div class="zag"><p>Technology, Interface Design</p></div>
+                            <div class="zag">
+                                <p>Technology, Interface Design</p>
+                            </div>
                             <h5>Using UX Design to Build a Sustainable Future</h5>
                             <div class="date">
                                 <p>6 May, 2020</p>
                             </div>
                             <div class="Description">
-                            <p>Transformation has to be driven by everybody, not just by climate groups, and we have a
-                                responsibility to use our influence to drive this. &#8594;</p>
+                                <p>Transformation has to be driven by everybody, not just by climate groups, and we have
+                                    a
+                                    responsibility to use our influence to drive this. &#8594;</p>
                             </div>
                         </div>
                     </div>
@@ -64,24 +87,25 @@
                     <div class="box-r">
                         <div class="box-text">
                             <div class="reve">
-                            <div class="zag">
-                            <p>Technology, Interface Design</p>
-                        </div>
-                            <h5>Using UX Design to Build a Sustainable Future</h5>
-                            <div class="date">
-                                <p>6 May, 2020</p>
-                            </div>
-                            <div class="Description">
-                            <p>Transformation has to be driven by everybody, not just by climate groups, and we have a
-                                responsibility to use our influence to drive this. &#8594; </p>
-                            </div>
+                                <div class="zag">
+                                    <p>Technology, Interface Design</p>
+                                </div>
+                                <h5>Using UX Design to Build a Sustainable Future</h5>
+                                <div class="date">
+                                    <p>6 May, 2020</p>
+                                </div>
+                                <div class="Description">
+                                    <p>Transformation has to be driven by everybody, not just by climate groups, and we
+                                        have a
+                                        responsibility to use our influence to drive this. &#8594; </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-               </div>
+                </div>
 
-           
-           
+
+
             </div>
         </section>
         <section class="latest-post">
@@ -107,7 +131,7 @@
                             <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
                         </div>
                     </div>
-    
+
                     <div class="latest-item">
                         <div class="box-l">
                             <img src="aset/images/image4.png" alt="">
@@ -121,7 +145,7 @@
                             <p>UI has to make a huge visual difference between warning, an alert and a success.</p>
                         </div>
                     </div>
-    
+
                     <div class="latest-item">
                         <div class="box-l">
                             <img src="aset/images/Image5.png" alt="">
@@ -132,14 +156,15 @@
                                 <p>8 June, 2020</p>
                             </div>
                             <h2>Creativity vs. UX</h2>
-                            <p>Is it possible to create a delightful user experience without following best UX practices?
+                            <p>Is it possible to create a delightful user experience without following best UX
+                                practices?
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            
+
         </section>
         <section class="most-popular">
             <div class="container">
@@ -162,12 +187,13 @@
                             </div>
                             <h2>Mentorship Match - How a simple LinkedIn </h2>
                             <h2>feature can boost diversity</h2>
-                            <p>LinkedIn is on a clear mission to make professionals more successful by connecting the global
+                            <p>LinkedIn is on a clear mission to make professionals more successful by connecting the
+                                global
                                 workroce and as we learned - diversity and succens go hand in hand</p>
                         </div>
                     </div>
-    
-    
+
+
                     <div class="popular-container">
                         <div class="box-top">
                             <img src="aset/images/Image2.png" alt="">
@@ -178,7 +204,8 @@
                                 <p>8 June, 2020</p>
                             </div>
                             <h2>Creativity vs.UX</h2>
-                            <p>Is it possible create a delightful user experience without following best UX practices? </p>
+                            <p>Is it possible create a delightful user experience without following best UX practices?
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +214,7 @@
                 </div>
             </div>
 
-           
+
         </section>
 
 
@@ -227,7 +254,7 @@
                             <button class="btn-fot"><img src="aset/images/flowbite_instagram-solid.svg" alt=""></button>
                         </div>
 
-                        
+
                         <div class="facebook">
                             <button class="btn-fot"><img src="aset/images/fa_facebook.svg" alt=""></button>
                         </div>
@@ -236,7 +263,7 @@
                             <button class="btn-fot"><img src="aset/images/flowbite_x-solid.svg" alt=""></button>
                         </div>
 
-                       
+
 
                         <div class="linkedin">
                             <button class="btn-fot"><img src="aset/images/fa6-brands_linkedin-in.svg" alt=""></button>
@@ -249,6 +276,7 @@
             <p>© Copyright Manifest Theme. Allrights reserved</p>
         </div>
     </footer>
+</div>
 </body>
 
 </html>
