@@ -4,7 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Bhromaon</title>
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+<link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="assets/favicon/site.webmanifest" />
+<link rel="stylesheet" href="assets/js/main.js">
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
 </head>
@@ -13,7 +20,7 @@
 
   <div class="page-shadow show " onclick="document.body.classList.toggle('open-mobile-menu')"></div>
   <div class="mobile-panel open">
-    <p>>Bhromaon</p>
+    <p>Bhromaon</p>
     <nav class="mobile-menu">
       <ul>
         <li><a href="#">Who We Are</a></li>
@@ -42,7 +49,7 @@
                 <button type="submit"> <img src="assets/images/search.svg" alt=""> Search</button>
               </form>
             </div>
-            <div class="scroll">
+            <div class="scroll wow animate__pulse animate__infinite	infinite">
               <a href="#about">Scroll Down</a>
               <div class="logo"> <svg class="logo">
                   <use xlink:href="assets/images/sprite.svg#chevron-down (1)"></use>
@@ -76,17 +83,17 @@
       <div class="Why" id="about">
         <div class="container">
           <div class="box">
-            <div class="box-text">
+            <div class="box-text wow animate__backInLeft">
               <h2>Why Choose Us</h2>
               <p>Tion and dislike men who are so beguiled and demoralized by desire by the charms of pleasure of the
                 moment, so blinded by desire, that they cannot foresee</p>
               <p>Ddislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by
                 desire, that.</p>
-              <button type="button"><span> Explore Places </span></button>
+              <button type="button" class=" wow animate__pulse  animate__infinite	infinite"><span> Explore Places </span></button>
             </div>
             <div class="picture">
-              <img class="pic-top" src="assets/images/domosere.png" alt="house">
-              <img class="pic-bottom" src="assets/images/bhommini.png" alt="imagesbhromaon">
+              <img class="pic-top wow animate__backInRight" src="assets/images/domosere.png" alt="house">
+              <img class="pic-bottom wow animate__backInRight" src="assets/images/bhommini.png" alt="imagesbhromaon">
             </div>
           </div>
 
@@ -95,12 +102,12 @@
       <div class="bg">
         <div class="steps">
           <div class="container">
-            <div class="dec">
+            <div class="dec wow animate__fadeIn animate__delay-1s	1s">
               <div class="arcit"></div>
 
               <div class="arc"></div>
             </div>
-            <ul>
+            <ul class="wow animate__fadeIn animate__delay-1s	1s">
               <li class="text-li"><svg class="sea">
                   <use class="search" xlink:href="assets/images/sprite.svg#search (3)"></use>
                 </svg> Search Places </li>
@@ -118,7 +125,7 @@
       <div class="bg-render">
         <div class="container">
           <div class="card">
-            <div class="card-item">
+            <div class="card-item wow animate__backInLeft">
               <h6>Spain</h6>
               <h5>Grand Spain Madrid</h5>
               <p>But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising
@@ -132,7 +139,7 @@
       <div class="bg-renderev">
         <div class="container">
           <div class="card-rev">
-            <div class="card-item rev">
+            <div class="card-item rev wow animate__backInRight">
               <h6>Spain</h6>
               <h5>Grand Spain Madrid</h5>
               <p>But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising
@@ -145,10 +152,10 @@
       </div>
       <div class="bg-WhatTouristSay">
         <div class="container">
-          <h2>What Our Tourists Say</h2>
+          <h2 class="wow animate__zoomInUp">What Our Tourists Say</h2>
           <div class="Review">
-            <img src="assets/images/ReviewPhoto.png" alt="">
-            <div class="ReviewText">
+            <img src="assets/images/ReviewPhoto.png" alt="Photo people" class=" wow animate__slideInLeft ">
+            <div class="ReviewText wow animate__slideInRight ">
               <h5>Sam Sumon</h5>
               <div class="textqu">
                 <svg class="quote">
@@ -171,9 +178,9 @@
     <footer>
       <div class="ft-bg">
         <div class="container">
-          <h3>Bhromaon</h3>
-          <p>Safe Travel Anywhere</p>
-          <ul class="soc-list">
+          <h3 class="wow animate__slideInLeft animate__slow">Bhromaon</h3>
+          <p class="wow animate__slideInRight animate__slow">Safe Travel Anywhere</p>
+          <ul class="soc-list wow animate__fadeInUp animate__delay-2s	2s">
             <li><a class="social" href="" target="_blank" rel="noreferrer nofollow" title="Link to Facebook">
                 <svg class="soc1">
                   <use class="soc" xlink:href="assets/images/sprite.svg#facebook-f"></use>
@@ -198,7 +205,7 @@
                 </svg>
               </a></li>
 
-            <li><a href="" target="_blank" rel="noreferrer nofollow" title="Link to pinterest">
+            <li id="myElement" class="visible wow animate__hinge animate__delay-4s	4s"><a href="" target="_blank" rel="noreferrer nofollow" title="Link to pinterest">
                 <svg class="soc5">
                   <use class="soc" xlink:href="assets/images/sprite.svg#pinterest"></use>
                 </svg>
@@ -208,6 +215,15 @@
       </div>
     </footer>
   </div>
+
+  <script src="assets/js/wow.min.js"></script>
+  <script>
+  const wow = new WOW({
+    animateClass: 'animate__animated'
+  });
+  wow.init();
+  </script>
+
 </body>
 
 </html>

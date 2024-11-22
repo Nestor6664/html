@@ -139,6 +139,20 @@ img {
   right: 23px;
 }
 
+#myElement {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .scroll {
   position: absolute;
   bottom: 206px;

@@ -151,6 +151,22 @@ img {
   right: 23px;
 }
 
+#myElement {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
 .scroll {
   position: absolute;
   bottom: 206px;
@@ -371,6 +387,9 @@ button:hover {
   background: url(../images/BookNow2bg.png) center center / cover no-repeat;
   height: 684px;
 }
+
+
+
 
 .card{padding-top: 219px;}
 
