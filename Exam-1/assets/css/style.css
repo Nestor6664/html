@@ -1,0 +1,858 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #fff;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+.container {
+  width: min(90%, 1324px);
+  margin: 0 auto;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-wrapper main {
+  flex-grow: 1;
+}
+
+.header-menu {
+  height: calc(100vh - 84px);
+  background: url(../images/HeaderBackground.png) center center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 128px;
+}
+.head .text h1 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "JSbold";
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 3.25rem;
+  /* 108.333% */
+  text-transform: uppercase;
+  margin-bottom: 11px;
+}
+.head .text p {
+  font-family: "JS";
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+  /* 127.273% */
+  letter-spacing: 0.42625rem;
+  margin-bottom: 2px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  overflow: hidden;
+  margin-top: 43px;
+}
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 10px 42px;
+  width: 501px;
+  height: 60px;
+  flex-shrink: 0;
+  font-size: 16px;
+  color: #333;
+}
+.search-container input::placeholder {
+  font-family: "JS";
+  font-size: 0, 875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.11rem;
+  color: #999;
+}
+.search-container button {
+  display: inline-flex;
+  gap: 13px;
+  border: none;
+  border-right: 5px solid white;
+  outline: none;
+  background-color: #5373FD;
+  color: white;
+  width: 148px;
+  height: 53px;
+  padding: 16px 24px;
+  font-family: "aleo";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.search-container button:hover {
+  background-color: #3a58d7;
+}
+.search-container button img {
+  width: 16px;
+  height: 16px;
+}
+
+.logo {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 23px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 206px;
+}
+.scroll a {
+  text-decoration: none;
+  color: white;
+  font-family: "JS";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.175rem;
+}
+
+.navigation {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  height: 84px;
+  background-color: #5373FD;
+  position: relative;
+}
+.navigation .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation .nav-menu ul {
+  display: flex;
+  gap: 40px;
+  font-family: "aleo";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.0875rem;
+  text-transform: uppercase;
+}
+.navigation .nav-menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.navigation h3 {
+  font-family: "JSbold";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+  /* 116.667% */
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  padding-top: 9px;
+}
+
+.Why {
+  background: url(../images/WhyBackground.png) center center/cover no-repeat;
+}
+
+.box {
+  display: flex;
+  padding: 124px 112px 124px 0px;
+  align-items: center;
+  gap: 136px;
+}
+
+.box h2 {
+  font-family: "aleo";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  /* 111.111% */
+  text-transform: capitalize;
+  margin-bottom: 29px;
+}
+
+.box p {
+  font-family: "JS-light";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75rem;
+  /* 175% */
+  letter-spacing: 0.1rem;
+  margin-bottom: 29px;
+}
+
+.box-text {
+  width: 648px;
+}
+
+.box-text button {
+  font-family: "aleo";
+  padding: 17px 31px;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 1.2px;
+  position: relative;
+  color: #fff;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button {
+  background-image: linear-gradient(48deg, #496bfe 40%, #5474fd 40%);
+}
+
+button:hover {
+  background-image: linear-gradient(45deg, #496bfe 40%, #496bfe 40%);
+}
+
+.picture {
+  display: flex;
+  width: 35%;
+  flex-direction: column;
+}
+
+.pic-top {
+  width: 82%;
+  padding-bottom: 18px;
+}
+
+.pic-bottom {
+  width: 83%;
+  align-self: flex-end;
+}
+
+.arcit {
+  width: 464px;
+  height: 344px;
+  border-radius: 100% 100% 0 0;
+  /* opacity: 0.5; */
+  border-top: 2px dashed gray;
+  position: absolute;
+  clip-path: inset(0 45px 285px 45px);
+  left: 50%;
+  transform: translate(-50%);
+  margin-left: 216px;
+  margin-top: 61px;
+}
+
+.arc {
+  width: 464px;
+  height: 344px;
+  border-radius: 100% 100% 0 0;
+  /* opacity: 0.5; */
+  border-top: 2px dashed gray;
+  position: absolute;
+  clip-path: inset(0 45px 285px 45px);
+  left: 50%;
+  transform: translate(-50%);
+  margin-left: -216px;
+  margin-top: 61px;
+}
+
+.bg {
+  height: 306px;
+  background-color: #333333;
+}
+
+.steps svg {
+  width: 64px;
+  height: 64px;
+}
+
+.steps ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 124px;
+  gap: 241px;
+}
+
+.steps ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+}
+
+.steps ul li #text {
+  font-size: 13px;
+}
+
+.text-li {
+  font-family: "aleo";
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  /* 111.111% */
+  text-transform: capitalize;
+}
+
+.bg-render {
+  background: url(../images/BookNowbg.png) center center/cover no-repeat;
+  height: 684px;
+}
+
+.bg-renderev {
+  background: url(../images/BookNow2bg.png) center center/cover no-repeat;
+  height: 684px;
+}
+
+.card {
+  padding-top: 219px;
+}
+
+.card-item {
+  width: 646px;
+  height: 344px;
+  background: rgba(35, 35, 35, 0.9);
+  padding-left: 31px;
+}
+
+.card-item.rev {
+  width: 653px;
+  height: 344px;
+  background: rgba(35, 35, 35, 0.9);
+  padding-left: 31px;
+}
+
+.card-rev {
+  padding-top: 219px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.card-item button {
+  font-family: "aleo";
+  padding: 17px 56px;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: 1.2px;
+  position: relative;
+  color: #fff;
+  outline: none;
+  border: none;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.card-item h6 {
+  font-family: "JS-light";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75rem;
+  /* 140% */
+  letter-spacing: 0.125rem;
+  padding-top: 44px;
+  padding-bottom: 16px;
+}
+
+.card-item h5 {
+  font-family: "JS";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+  /* 140% */
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+
+.card-item p {
+  font-family: "JS-light";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75rem;
+  /* 175% */
+  letter-spacing: 0.1rem;
+  padding-bottom: 24px;
+}
+
+.bg-WhatTouristSay {
+  display: flex;
+  text-align: center;
+  background: url(../images/BG.png) center center/cover no-repeat;
+  height: 680px;
+}
+
+.bg-WhatTouristSay h2 {
+  padding-top: 117px;
+  font-family: "aleo";
+  font-size: 2.32rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  /* 111.111% */
+  text-transform: capitalize;
+}
+
+.Review {
+  display: flex;
+  align-self: flex-start;
+  padding-top: 62px;
+}
+
+.Review img {
+  width: 33.2%;
+}
+
+.ReviewText {
+  background-color: #333;
+  text-align: start;
+  padding-left: 60px;
+  padding-top: 48px;
+  padding-right: 65px;
+}
+
+.ReviewText h5 {
+  font-family: "JS";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+  /* 140% */
+  text-transform: uppercase;
+  padding-bottom: 16px;
+}
+
+.ReviewText p {
+  font-family: "JS-light";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.75rem;
+  /* 175% */
+  letter-spacing: 0.1rem;
+}
+
+.textqu {
+  display: flex;
+}
+
+.quote {
+  width: 139px;
+  height: 20px;
+}
+
+.ft-bg {
+  background-color: #000;
+  height: 268px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.ft-bg h3 {
+  font-family: "JSbold";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+  /* 116.667% */
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+}
+
+.ft-bg p {
+  font-family: "JS";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.175rem;
+}
+
+.soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 31px;
+  padding-top: 22px;
+}
+.soc-list li a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.soc-list li a svg path {
+  fill: #FFF;
+}
+.soc-list li a:hover svg path, .soc-list li a:active svg path {
+  fill: #496bfe;
+}
+
+.soc1 {
+  width: 20px;
+  height: 32px;
+}
+
+.soc2 {
+  width: 32px;
+  height: 32px;
+}
+
+.soc3 {
+  width: 28px;
+  height: 32px;
+}
+
+.soc4 {
+  width: 36px;
+  height: 32px;
+}
+
+.soc5 {
+  width: 31px;
+  height: 32px;
+}
+
+.nav-menu ul a {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-menu ul a::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: 0;
+  transition: all 0.5s ease;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.nav-menu ul a:hover {
+  color: white;
+}
+
+.nav-menu ul a:hover::after {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  margin-left: 40px;
+}
+
+.hamb-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: relative;
+  border: none;
+}
+.hamb-btn::before, .hamb-btn::after {
+  content: "";
+}
+.hamb-btn span, .hamb-btn::before, .hamb-btn::after {
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+.hamb-btn span {
+  top: 8px;
+}
+.hamb-btn::before {
+  top: 18px;
+}
+.hamb-btn::after {
+  bottom: 8px;
+}
+
+.page-shadow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(31, 68, 99, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+.mobile-menu ul li a {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #FFF;
+  font-family: "aleo";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.0875rem;
+  text-transform: uppercase;
+}
+.mobile-menu ul li a:hover {
+  background-color: rgba(162, 206, 255, 0.705);
+}
+
+.mobile-panel {
+  position: fixed;
+  left: 0;
+  transform: translateX(-300px);
+  top: 0;
+  background-color: #fff;
+  width: 293px;
+  height: 34vh;
+  padding: 20px;
+  z-index: 1000;
+  transition: all 0.5 ease;
+  background-color: #5373FD;
+  border-radius: 12px;
+}
+.mobile-panel p {
+  text-align: center;
+  font-family: "JSbold";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+  /* 116.667% */
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.open-mobile-menu .page-shadow {
+  opacity: 1;
+  visibility: visible;
+}
+.open-mobile-menu .mobile-panel {
+  transform: translateX(0);
+}
+
+@media (max-width: 1024px) {
+  .ReviewText {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .Review img {
+    width: 50%;
+  }
+
+  .container {
+    width: min(95%, 1024px);
+  }
+
+  .nav-menu ul li {
+    margin-bottom: 10px;
+  }
+
+  .box {
+    gap: 1px;
+  }
+
+  /* Стилі для текстових блоків */
+  .head {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .picture img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1, h2, h3, p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-text {
+    text-align: center;
+  }
+
+  .box {
+    padding: 60px 0 60px 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .picture {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .nav-menu ul li {
+    margin-bottom: 10px;
+  }
+
+  .pic-top {
+    width: 100%;
+    padding-bottom: 0;
+  }
+
+  .pic-bottom {
+    width: 100%;
+  }
+
+  /* Стилі для текстових блоків */
+  .head .text {
+    text-align: center;
+  }
+
+  /* Адаптація зображень */
+  .picture img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Стилі для карток */
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card-item.rev {
+    width: 100%;
+  }
+
+  .steps ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0px;
+    gap: 60px;
+  }
+
+  .arc {
+    display: none;
+  }
+
+  .search-container input {
+    width: 385px;
+  }
+
+  .arcit {
+    display: none;
+  }
+
+  .bg-WhatTouristSay {
+    height: 100vh;
+  }
+
+  .Review img {
+    width: 100%;
+  }
+
+  .bg {
+    height: 100%;
+  }
+
+  .Review {
+    display: flex;
+    align-self: flex-start;
+    padding-top: 34px;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  .navigation .nav-menu ul {
+    display: none;
+  }
+
+  .search-container input {
+    width: 365px;
+  }
+
+  .picture img {
+    max-width: 49%;
+    height: auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .card, .nav-menu {
+    display: flex;
+    flex-direction: row;
+  }
+}
