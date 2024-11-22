@@ -19,7 +19,8 @@ ol {
 img {
   width: 82%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   vertical-align: top;
 }
 
@@ -99,6 +100,50 @@ img {
     flex-shrink: 0;
     font-size: 16px;
     color: #333;
+
+    &::-webkit-input-placeholder {
+      font-family: "JS";
+      font-size: 0, 875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.25rem;
+      /* 142.857% */
+      letter-spacing: 0.11rem;
+      color: #999;
+    }
+
+    &::-moz-placeholder {
+      font-family: "JS";
+      font-size: 0, 875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.25rem;
+      /* 142.857% */
+      letter-spacing: 0.11rem;
+      color: #999;
+    }
+
+    &:-ms-input-placeholder {
+      font-family: "JS";
+      font-size: 0, 875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.25rem;
+      /* 142.857% */
+      letter-spacing: 0.11rem;
+      color: #999;
+    }
+
+    &::-ms-input-placeholder {
+      font-family: "JS";
+      font-size: 0, 875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.25rem;
+      /* 142.857% */
+      letter-spacing: 0.11rem;
+      color: #999;
+    }
 
     &::placeholder {
       font-family: "JS";
@@ -191,6 +236,7 @@ img {
   align-items: center;
   height: 84px;
   background-color: #5373FD;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 
@@ -318,7 +364,8 @@ button:hover {
   /* opacity: 0.5; */
   border-top: 2px dashed gray;
   position: absolute;
-  clip-path: inset(0 45px 285px 45px);
+  -webkit-clip-path: inset(0 45px 285px 45px);
+          clip-path: inset(0 45px 285px 45px);
   left: 50%;
   transform: translate(-50%);
   margin-left: 12%;
@@ -332,7 +379,8 @@ button:hover {
   /* opacity: 0.5; */
   border-top: 2px dashed gray;
   position: absolute;
-  clip-path: inset(0 45px 285px 45px);
+  -webkit-clip-path: inset(0 45px 285px 45px);
+          clip-path: inset(0 45px 285px 45px);
   left: 50%;
   transform: translate(-50%);
   margin-left: -216px;
