@@ -920,3 +920,7 @@ button:hover {
 .soc-list a:hover svg {
   fill: #5373FD;
 }
+
+path:hover {
+  fill: #5373FD;
+}
