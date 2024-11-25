@@ -13,14 +13,14 @@
 <body>
     <header>
         <div class="container">
-            <p>CASE STUDY</p>
+            <p class=" wow animate__fadeInDown">CASE STUDY</p>
         </div>
     </header>
     <main>
         <section class="img-section">
             <div class="container">
-                <h1>AI Fashion Platform</h1>
-                <div class="img">
+                <h1 class="wow animate__slideInLeft">AI Fashion Platform</h1>
+                <div class="img wow animate__slideInRight">
                     <picture>
                         <source srcset="assets/image/strelka1170.webp 1x, assets/image/strelka2340.webp 2x"
                             media="(min-width: 1170px)">
@@ -35,8 +35,8 @@
         </section>
         <section class="bottom-section">
             <div class="container">
-                <h2>Project Overview</h2>
-                <div class="head">
+                <h2 class="wow animate__slideInLeft">Project Overview</h2>
+                <div class="head wow animate__slideInRight">
                     <p>FashHanger is a bespoke sustainable high-fashion accessory company based out of Berlin, currently
                         operated by Siesly and her sister Ashely. They needed help for a big rebrand and wanted to
                         relaunch
@@ -52,8 +52,8 @@
 
         <section class="img-section">
             <div class="container">
-                <h2>User Research and Personas</h2>
-                <div class="img">
+                <h2 class="wow animate__slideInLeft">User Research and Personas</h2>
+                <div class="img wow animate__slideInRight">
                     <picture>
                         <source srcset="assets/image/dom1170.webp 1x, assets/image/dom2340.webp 2x"
                             media="(min-width: 1170px)">
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </section>
-        <section class="bottom-section">
+        <section class="bottom-section wow animate__slideInLeft">
             <div class="container">
                 <p>Who is your user? Indicate her KEY personality traits and help round out her overall image.</p>
                 <p>Originally, the personality section of this persona was based off the Myers Briggs personality test.
@@ -82,8 +82,8 @@
 
         <section class="img-section">
             <div class="container">
-                <h2>Initial Sketches</h2>
-                <div class="img">
+                <h2 class="wow animate__slideInLeft">Initial Sketches</h2>
+                <div class="img wow animate__slideInRight">
                     <picture>
                         <source srcset="assets/image/bigh1170.webp 1x, assets/image/bigh2340.webp 2x"
                             media="(min-width: 1170px)">
@@ -96,7 +96,7 @@
                 </div>
             </div>
         </section>
-        <section class="bottom-section">
+        <section class="bottom-section wow animate__slideInLeft">
             <div class="container">
                 <p>In the beginning, It’s just about brainstorming.</p>
                 <p>I list out a jumble of words and draw tiny sketches related to what I’m working on (and find the
@@ -111,8 +111,8 @@
 
         <section class="img-section">
             <div class="container">
-                <h2>Final Design</h2>
-                <div class="img">
+                <h2 class="wow animate__slideInLeft">Final Design</h2>
+                <div class="img wow animate__slideInRight">
                     <picture>
                         <source srcset="assets/image/fonar1170.webp 1x, assets/image/fonar2340.webp 2x"
                             media="(min-width: 1170px)">
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </section>
-        <section class="bottom-section">
+        <section class="bottom-section wow animate__slideInLeft">
             <div class="container">
                 <p>I played with adding a wireframe of the website flow that would lead you in to each screen. For each
                     of
@@ -141,13 +141,13 @@
             <div class="foot">
                 <div class="footer-box">
                     <div class="CTA-l">
-                        <div class="title">
+                        <div class="title wow animate__slideInLeft">
                             <h2>Need a project?</h2>
                         </div>
-                        <p>(239)555-0108</p>
-                        <p>tanya.hill@exaple.com</p>
+                        <p class="wow animate__slideInLeft animate__slow ">(239)555-0108</p>
+                        <p class=" wow animate__slideInLeft">tanya.hill@exaple.com</p>
                     </div>
-                    <div class="CTA-r">
+                    <div class="CTA-r wow animate__slideInRight ">
 
                         <div class="instagram">
                             <button class="btn-fot"><img src="assets/image/flowbite_instagram-solid.svg"
@@ -172,10 +172,20 @@
                 </div>
             </div>
         </div>
-        <div class="botom">
+        <div class="botom wow animate__fadeInUp animate__delay-1s">
             <p>© Copyright Manifest Theme. Allrights reserved</p>
         </div>
     </footer>
+
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+    const wow = new WOW({
+      animateClass: 'animate__animated'
+    });
+    wow.init();
+    </script>
+  
+
 </body>
 
 </html>
