@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="assets/css/style.scss">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="card mb-3" style="width: 50%;margin-inline: auto;">
+    <div class="card-header">
+      Завдання №1
+    </div>
+    <div class="card-body">
+        <p class="card-text">який ваш вік</p>
+        <div class="mb-3">
+            <input type="number" class="form-control" id="age">
+            <div class="form-text">Введіть дані</div>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="startt1()"style="background-color: rgb(71, 9, 143); border-color: rgb(71, 9, 143);" >Обчислити</button>
+    </div>
+    <div class="card-footer">
+      Результат: <span id="message"></span>
+    </div>
+</div>
+  
+
+<div class="card mb-3" style="width: 50%;margin-inline: auto;">
+  <div class="card-header">
+      Завдання №2
+  </div>
+  <div class="card-body">
+      <p class="card-text">Введіть число від 0 до 9:</p>
+      <div class="mb-3">
+        <input type="number" class="form-control" id="numberInput">
+        <div class="form-text">Введіть дані</div>
+    </div>
+
+      <button type="button" class="btn btn-primary" onclick="showSymbol()" style="background-color: rgb(71, 9, 143); border-color: rgb(71, 9, 143);">Обчислити</button>
+  </div>
+  <div class="card-footer">
+      Результат: <span id="message2"><span></span></span>
+  </div>
+</div>
+
+<div class="card mb-3" style="width: 50%; margin-inline: auto;">
+  <div class="card-header">
+    Завдання №3
+  </div>
+  <div class="card-body">
+      <p class="card-text">Підрахуй суму всіх чисел</p>
+      <div class="mb-3">
+          <label for="rangstart" class="form-label">Початок діапазону</label>
+          <input type="number" class="form-control" id="rangstart">
+          <label for="rangend" class="form-label">Кінець діапазону</label>
+          <input type="number" class="form-control" id="rangend">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="sum()" style="background-color: rgb(71, 9, 143); border-color: rgb(71, 9, 143);">Обчислити</button>
+  </div>
+  <div class="card-footer">
+    Результат: <span id="rang"></span>
+  </div>
+</div>
+</div>
+
+<div class="card mb-3" style="width: 50%; margin-inline: auto;">
+  <div class="card-header">
+    Завдання №4
+  </div>
+  <div class="card-body">
+      <p class="card-text">знайди найбільший спільний дільник.</p>
+      <div class="mb-3">
+          <label for="num1" class="form-label">Перше число</label>
+          <input type="number" class="form-control" id="num1">
+          <label for="num2" class="form-label">Друге число</label>
+          <input type="number" class="form-control" id="num2">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="spdil()" style="background-color: rgb(71, 9, 143); border-color: rgb(71, 9, 143);">Обчислити</button>
+  </div>
+  <div class="card-footer">
+    Результат: <span id="SPdilnuk"></span>
+  </div>
+</div>
+</div>
+
+
+
+<div class="card mb-3" style="width: 50%;margin-inline: auto;">
+  <div class="card-header">
+      Завдання №5
+  </div>
+  <div class="card-body">
+      <p class="card-text">Пошук дільників числа</p>
+      <div class="mb-3">
+        <input type="number" class="form-control" id="dilnuk">
+        <div class="form-text">Введіть число:</div>
+    </div>
+
+      <button type="button" class="btn btn-primary" onclick="dilnuki()" style="background-color: rgb(71, 9, 143); border-color: rgb(71, 9, 143);">Обчислити</button>
+  </div>
+  <div class="card-footer">
+    Знайти дільники: <span id="result"><span></span></span>
+  </div>
+</div>
+
+
+<div class="card mb-3" style="width: 50%; margin-inline: auto;">
+  <div class="card-body">
+      <p class="card-text"> Перевірка паліндрому.</p>
+      <div class="mb-3">
+          <input type="number" class="form-control" id="number">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="checkPalindrome()" style="background-color: rgb(71, 9, 143); border-color: rgb(71, 9, 143);">Обчислити</button>
+  </div>
+  <div class="card-footer">
+      Результат <span id="resultpal"></span>
+  </div>
+</div>
+
+<div class="card mb-3" style="width: 50%; margin-inline: auto;">
+  <div class="card-body">
+      <p class="card-text">Знижка на покупку</p>
+      <div class="mb-3">
+          <input type="number" class="form-control" id="purchaseAmount">
+          <div class="form-text">Введіть суму покупки:</div>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="calculateDiscount()" style="background-color: rgb(71, 9, 143); border-color: rgb(71, 9, 143);">Обчислити</button>
+  </div>
+  <div class="card-footer">
+      Результат <span id="resultdis"></span>
+  </div>
+</div>
+
+<div class="card mb-3" style="width: 50%; margin-inline: auto;">
+  <div class="card-body">
+      <p class="card-text">Введіть 10 чисел</p>
+      <div class="mb-3">
+          
+      </div>
+      <button type="button" class="btn btn-primary" onclick="calc()" style="background-color: rgb(71, 9, 143); border-color: rgb(71, 9, 143);">Обчислити</button>
+  </div>
+  <div class="card-footer">
+      Результат <span id="Stats"></span>
+  </div>
+</div>
+
+<div class="card mb-3" style="width: 50%; margin-inline: auto;">
+  <div class="card-body">
+      <p class="card-text">Дні тижня</p>
+      <div class="mb-3">
+          
+      </div>
+      <button type="button" class="btn btn-primary" onclick="showDays()" style="background-color: rgb(71, 9, 143); border-color: rgb(71, 9, 143);">Обчислити</button>
+  </div>
+  <div class="card-footer">
+     
+  </div>
+</div>
+
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
