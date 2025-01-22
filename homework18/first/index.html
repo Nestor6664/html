@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework18</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif
+        }
+        textarea {
+            width: 23%;
+            height: 110px;
+        }
+
+.text{
+    display: flex;
+    justify-content: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="editor" class="text">Це текст можна редагувати.</div>
+    <sup class="text">ctrl+e редакувати</sup>
+    <sup class="text">ctrl+s зберегти</sup>
+    <textarea id="text-edit" style="display: none;"></textarea>
+    <script>
+            const editor = document.getElementById('editor')
+let isEditing = false;
+document.addEventListener('keydown', (event) => {
+  if (event.ctrlKey && event.key === 'e') {
+    event.preventDefault(); 
+    if (!isEditing) {
+      const text = editor.textContent;
+      editor.innerHTML = `<textarea>${text}</textarea>`;
+      isEditing = true;
+    }
+  } else if (event.ctrlKey && event.key === 's') {
+    event.preventDefault();
+    if (isEditing) {
+      const textarea = editor.querySelector('textarea');
+      const text = textarea.value;
+      editor.textContent = text;
+      isEditing = false;
+    }
+  }
+});
+    </script>
+</body>
+</html>

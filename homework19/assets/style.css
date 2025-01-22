@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+form {
+  margin-bottom: 20px;
+}
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.movie-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+.movie-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.details {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
