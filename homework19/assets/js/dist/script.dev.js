@@ -1,7 +1,7 @@
 "use strict";
 
 var API_KEY = '7add6263';
-var BASE_URL = 'http://www.omdbapi.com/';
+var BASE_URL = 'https://www.omdbapi.com/';
 var searchForm = document.getElementById('searchForm');
 var movieContainer = document.getElementById('movieContainer');
 var paginationContainer = document.getElementById('paginationContainer');
