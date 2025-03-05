@@ -2411,3 +2411,501 @@ td img {
   transform-origin: left top;
   z-index: -1;
 }
+
+/*----------------------------------------------------------------------ABOUT-US-----------------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------plan----------------------------------------------------------------------*/
+
+
+.plan-calc {
+  margin-bottom: 74px;
+}
+
+.plan-card {
+  padding-bottom: 40px;
+}
+
+.table-color .card:nth-child(1) {
+  background: linear-gradient(to left, #ceeb7a, #2f9b73, #5bddbf)
+}
+
+.table-color .card:nth-child(2) {
+  background: linear-gradient(to left, #f7cb20, #d9a225, #dd6d5b);
+}
+
+.table-color .card:nth-child(3) {
+  background: linear-gradient(to left, #e74e45, #ff7272, #f36601);
+}
+
+/*--------------------------------------------------------------------plan----------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------investor----------------------------------------------------------------------*/
+
+
+
+.team-investor {
+  overflow: hidden;
+  border-radius: 50% 50% 0 0;
+  position: relative;
+}
+
+.card-investor img {
+  width: 320px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-overlay {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #31065B;
+}
+
+
+.card-overlay h4 {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Rajdhani';
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.card-overlay span {
+  color: #FFF;
+  text-align: center;
+  font-family: 'open-sans';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  margin-left: 70px;
+  /* виключи всі такі марджини при адаптиві*/
+}
+
+
+
+.card-overlay::after {
+  content: "";
+  width: 50%;
+  height: 30px;
+  background: #31065B;
+  position: absolute;
+  left: 0;
+  top: -19px;
+  -webkit-transform: skewY(-6deg);
+  transform: skewY(-6deg);
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  z-index: -1;
+}
+
+.card-overlay::before {
+  content: "";
+  width: 50%;
+  height: 30px;
+  background: #31065B;
+  position: absolute;
+  right: 0;
+  top: -19px;
+  -webkit-transform: skewY(6deg);
+  transform: skewY(6deg);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  z-index: -1;
+}
+
+/*--------------------------------------------------------------------investor----------------------------------------------------------------------*/
+
+/*--------------------------------------------------------------------Blog--------------------------------------------------------------------------*/
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #6200ea;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: #3700b3;
+}
+
+.pagination-button.active {
+  background-color: #03dac6;
+  color: black;
+}
+
+#Blog9-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.blog9-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: linear-gradient(to left, #0c040f, #480d66, #000000);
+}
+
+.blog9-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog9-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.content-blog9 {
+  padding: 15px;
+}
+
+.ft-blog9 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 12px;
+  color: gray;
+}
+
+.blog9-section {
+  text-align: center;
+  background-color: #40096E;
+  padding-top: 100px;
+  color: white;
+  padding-bottom: 150px;
+}
+
+
+
+/*--------------------------------------------------------------------Blog--------------------------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------------------contact--------------------------------------------------------------------------*/
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+  // min-height: 100vh;
+}
+
+.contact-block {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.info-box {
+  background-color: #31065B;
+  padding: 25px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.info-box h3 {
+  color: #FFF;
+  font-family: 'Rajdhani';
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  color: #FFF;
+  font-family: 'open-sans';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  /* 187.5% */
+}
+
+.form-wrapper {
+  flex: 1;
+  max-width: 650px;
+}
+
+.form-container {
+  background-color: #31065B;
+  padding: 25px;
+  border-radius: 10px;
+  color: white;
+  height: 514px;
+}
+
+#contactForm input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 2px solid #6c63ff;
+  font-size: 14px;
+  background-color: transparent;
+  color: white;
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+}
+
+.button-c {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-c:hover {
+  opacity: 0.8;
+}
+
+.C-error {
+  color: red;
+  font-size: 12px;
+  display: none;
+  margin-top: 5px;
+}
+
+.CI-error {
+  border: 2px solid red;
+  background-color: #ffefef;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+/*--------------------------------------------------------------------contact--------------------------------------------------------------------------*/
+
+.privacy-policy {
+  background-color: #2c1d4f;
+  color: white;
+  padding: 20px;
+  min-height: 230vh;
+  position: relative;
+}
+
+.sidebar {
+  width: 15%;
+  background-color: #3f2d6d;
+  padding: 20px;
+  border-radius: 8px;
+  margin-right: 20px;
+  height: fit-content;
+  max-height: calc(150vh - 40px)
+  
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar a:hover {
+  color: #a4a6ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.content-faq {
+  width: 67%;
+  background-color: #3f2d6d;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  color: #a4a6ff;
+  border-bottom: 2px solid #a4a6ff;
+  padding-bottom: 10px;
+  font-family: 'Rajdhani';
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2.5rem;
+  /* 133.333% */
+}
+
+.section p,
+.section ul {
+  color: #FFF;
+  font-family: 'open-sans';
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.privacy-policy::before {
+  content: "";
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  left: 0;
+  transform: skewY(3deg);
+  transform-origin: right top;
+  z-index: 0;
+  background: #40096e;
+  top: -2px;
+}
+
+.policy {
+  margin-top: 120px;
+  display: flex;
+  gap: 75px;
+}
+
+
+
+
+
+
+
+
+#crypto-innovations {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#crypto-innovations h2 {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  color: #a4a6ff; 
+  margin-bottom: 10px;
+}
+
+#crypto-innovations p {
+  font-family: 'open-sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+  color: #e0e0e0; 
+  margin-bottom: 20px;
+}
+
+
+.crypto-faq-item {
+  margin-bottom: 15px;
+}
+
+.crypto-faq-question {
+  background-color: #3f2d6d; 
+  border: none;
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  font-family: 'open-sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.crypto-faq-question::after {
+  content: '+'; 
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.crypto-faq-question.active::after {
+  content: '-'; 
+  transform: rotate(180deg);
+}
+
+.crypto-faq-question:hover {
+  background-color: #4a387d; 
+  transform: scale(1.02); 
+}
+
+.crypto-faq-answer {
+  background-color: #4a387d;
+  padding: 15px;
+  margin-top: 5px;
+  border-radius: 8px;
+  display: none; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.crypto-faq-answer p {
+  margin: 0;
+  color: #e0e0e0;
+}
+
+
+#two-faq {
+  padding-bottom: 155px;
+  padding-left: 459px;
+}
