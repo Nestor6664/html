@@ -2667,3 +2667,1345 @@ textarea {
   padding-bottom: 155px;
   padding-left: 459px;
 }
+
+.hamburger {
+  display: none;
+  margin-left: 40px;
+}
+
+.hamb-btn {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  position: relative;
+  border: none;
+}
+
+.hamb-btn::before,
+.hamb-btn::after {
+  content: "";
+}
+
+.hamb-btn span,
+.hamb-btn::before,
+.hamb-btn::after {
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.hamb-btn span {
+  top: 8px;
+}
+
+.hamb-btn::before {
+  top: 18px;
+}
+
+.hamb-btn::after {
+  bottom: 8px;
+}
+
+.page-shadow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(77, 20, 110, 0.397);
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.mobile-menu ul li a {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #FFF;
+  font-family: "open-sans-bold";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25rem;
+  /* 142.857% */
+  letter-spacing: 0.0875rem;
+  text-transform: uppercase;
+}
+
+.mobile-menu ul li a:hover {
+  background-color: rgba(161, 73, 212, 0.514);
+}
+
+.mobile-panel {
+  position: fixed;
+  left: 0;
+  transform: translateX(-300px);
+  top: 0;
+  background-color: #fff;
+  width: 293px;
+  height: 42vh;
+  padding: 20px;
+  z-index: 1000;
+  transition: all 0.5 ease;
+  background-color: #3a096b;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.mobile-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/footer-bg.png) center center/cover no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.mobile-panel p {
+  text-align: center;
+  font-family: "rajdhani-bold";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+  color: #ccd6f1;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.mobile-panel p span {
+  font-size: 1.7rem;
+  color: indianred;
+}
+
+.open-mobile-menu .page-shadow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.open-mobile-menu .mobile-panel {
+  transform: translateX(0);
+}
+
+/*-------------------------------------------------------------------------------*/
+@media (max-width: 1200px) {
+  .container {
+    width: min(85%, 1200px);
+  }
+
+  .hero-image img {
+    display: none;
+  }
+
+  .bg {
+    height: 905px;
+  }
+
+  .buttons button {
+    padding: 1em 0.8em;
+  }
+
+  .header-menu {
+    padding-left: 30px;
+  }
+
+  .header-menu ul {
+    gap: 25px;
+    margin-left: 40px;
+  }
+
+  .hero {
+    padding-left: 50px;
+    padding-bottom: 300px;
+  }
+
+  .hero-content {
+    width: 500px;
+  }
+
+  .hero-content h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+
+  .hero-image {
+    top: 200px;
+    right: 50px;
+  }
+
+  .hero-image img {
+    width: 80%;
+  }
+
+  .investment-plan h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .investment-plan p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .pricing-table {
+    gap: 20px;
+  }
+
+  .card {
+    width: 250px;
+    height: 380px;
+    padding: 25px;
+  }
+
+  .Secure-block {
+    gap: 100px;
+  }
+
+  .Secure-content h3 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .Secure-content p {
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+
+  .feature {
+    gap: 20px;
+  }
+
+  .calculator-section h3 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    padding-top: 100px;
+  }
+
+  .calculator {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .columbn,
+.columb {
+    max-width: 100%;
+  }
+
+  .investor .text h3 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .investor .text p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .teams {
+    gap: 40px;
+  }
+
+  .team-image img {
+    width: 250px;
+    height: 180px;
+  }
+
+  .Refferal .text h4 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .Choose .text h4 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .Choose .text p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .features {
+    gap: 20px;
+  }
+
+  .feature,
+.feature-2 {
+    max-width: 300px;
+  }
+
+  .center-image img {
+    width: 250px;
+  }
+
+  .stats {
+    gap: 40px;
+    padding: 80px;
+  }
+
+  .stat-card {
+    width: 250px;
+    height: 190px;
+  }
+
+  .number span {
+    font-size: 60px;
+  }
+
+  .stat-card p {
+    font-size: 12px;
+  }
+
+  .transactions {
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .transaction-box {
+    width: 40%;
+  }
+
+  .transaction-box h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .working-process i {
+    margin-left: 400px;
+  }
+
+  .working-process h4 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .working-process p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .working-process h5 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .steps {
+    gap: 30px;
+  }
+
+  .step {
+    width: 25%;
+  }
+
+  .faq-box {
+    max-width: 700px;
+    margin-left: 175px;
+  }
+
+  .faq-box h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .faq-box p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .faq-question {
+    font-size: 16px;
+  }
+
+  .download-section {
+    gap: 100px;
+  }
+
+  .right h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .right p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .feedback-section h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .feedback-section p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .feedback .circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .small {
+    width: 70px;
+    height: 70px;
+  }
+
+  .blog-section {
+    padding-top: 150px;
+  }
+
+  .blog-text h2 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .blog-text p {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .news-grid {
+    gap: 15px;
+    padding-bottom: 100px;
+  }
+
+  .news-card {
+    width: 280px;
+  }
+
+  .foot-bg {
+    padding-top: 80px;
+  }
+
+  .footer-section {
+    width: 30%;
+    min-width: 200px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .footer-section p,
+.footer-section ul li a {
+    font-size: 0.9rem;
+    line-height: 1.7rem;
+  }
+
+  .social-footer {
+    padding: 15px 15px;
+    gap: 15px;
+  }
+
+  .socialContainer {
+    width: 40px;
+    height: 40px;
+  }
+
+  .support-footer {
+    margin-left: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .up,
+.down {
+    gap: 5px;
+  }
+
+  .card1,
+.card2,
+.card3,
+.card4 {
+    width: 60px;
+    height: 60px;
+  }
+}
+/* Для екранів до 768px (малі планшети/великі телефони) */
+@media (max-width: 768px) {
+  .header-menu {
+    padding: 20px 0;
+  }
+
+  .investment-plan {
+    padding-top: 225px;
+  }
+
+  .header-menu ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Додаємо відступи для логотипу на малих екранах */
+  .logo {
+    padding: 10px 0;
+  }
+
+  .logo img {
+    max-width: 80%;
+    /* Зменшуємо логотип на малих екранах */
+  }
+
+  .hero {
+    padding-left: 20px;
+    padding-bottom: 200px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 0.9em;
+  }
+
+  .hero-image {
+    top: 150px;
+    right: 20px;
+  }
+
+  .hero-image img {
+    width: 60%;
+  }
+
+  .investment-plan h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .investment-plan p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+
+  .pricing-table {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    height: 350px;
+    padding: 20px;
+  }
+
+  .Secure-block {
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 50px;
+    align-items: center;
+  }
+
+  .Secure-content h3 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .Secure-content p {
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+
+  .feature {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature .icon img {
+    width: 50px;
+  }
+
+  .calculator-section h3 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    padding-top: 115px;
+  }
+
+  .calculator {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  input,
+select {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .investor {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+
+  .investor .text h3 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .investor .text p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+
+  .teams {
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 50px;
+  }
+
+  .team-image img {
+    width: 200px;
+    height: 140px;
+  }
+
+  .Refferal {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .Refferal .text h4 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .st-button button {
+    padding: 0.8em 2.5em;
+    font-size: 14px;
+  }
+
+  .Choose {
+    padding-top: 80px;
+  }
+
+  .Choose .text h4 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .Choose .text p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 10px;
+  }
+
+  .feature,
+.feature-2 {
+    flex-direction: column;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .center-image img {
+    width: 200px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 20px;
+    align-items: center;
+  }
+
+  .stat-card {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+  }
+
+  .number span {
+    font-size: 50px;
+  }
+
+  .stat-card p {
+    font-size: 11px;
+  }
+
+  .transactions {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .transaction-box {
+    width: 100%;
+  }
+
+  .transaction-box h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  td img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .working-process i {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .working-process h4 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .working-process p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+
+  .working-process h5 {
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+  }
+
+  .steps {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .step {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .circle {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .steps .circle::before {
+    width: 80px;
+    height: 80px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .faq-box {
+    max-width: 90%;
+    margin-left: 0;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .faq-box h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .faq-box p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+
+  .faq-question {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .faq-question .icon {
+    font-size: 18px;
+  }
+
+  .download-section {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .right {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .right h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .right p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+
+  .android h4,
+.ios h4 {
+    font-size: 1rem;
+  }
+
+  .android li,
+.ios li {
+    font-size: 0.9rem;
+  }
+
+  .buttons-f button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .feedback {
+    margin-top: 100px;
+  }
+
+  .feedback-section {
+    margin-top: 50px;
+  }
+
+  .feedback-section h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .feedback-section p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+
+  .feedback .circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .small {
+    width: 60px;
+    height: 60px;
+  }
+
+  .text-section {
+    margin-top: 60px;
+  }
+
+  .text-section h3,
+.text-section p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .blog-section {
+    padding-top: 100px;
+  }
+
+  .blog-text h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .blog-text p {
+    font-size: 0.9rem;
+    line-height: 1.8rem;
+  }
+
+  .news-grid {
+    gap: 10px;
+    padding-bottom: 80px;
+  }
+
+  .news-card {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .news-card img {
+    height: 150px;
+  }
+
+  .foot-bg {
+    padding-top: 60px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .footer-section h3 {
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+  }
+
+  .footer-section p,
+.footer-section ul li a {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .calc img {
+    display: none;
+  }
+
+  .team-image {
+    mask-image: url(../images/team-shape.png);
+    -webkit-mask-size: 100% 100%;
+  }
+
+  .team {
+    display: flex;
+    justify-content: center;
+  }
+
+  .feedback-section i {
+    margin-left: 0px;
+  }
+}
+/* Для екранів до 480px (мобільні телефони) */
+@media (max-width: 480px) {
+  .header-menu {
+    padding-left: 15px;
+  }
+
+  .investment-plan {
+    padding-top: 280px;
+  }
+
+  .calc img {
+    display: none;
+  }
+
+  .header-menu .logo img {
+    width: 80%;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .buttons button {
+    padding: 0.8em 1.2em;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding-left: 10px;
+    padding-bottom: 150px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 0.8em;
+  }
+
+  .hero-image {
+    top: 100px;
+    right: 10px;
+  }
+
+  .hero-image img {
+    width: 50%;
+  }
+
+  .investment-plan h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .investment-plan p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .card {
+    max-width: 250px;
+    height: 320px;
+    padding: 15px;
+  }
+
+  .Secure-block {
+    gap: 20px;
+    padding-top: 30px;
+  }
+
+  .Secure-content h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .Secure-content p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+
+  .feature .icon img {
+    width: 40px;
+  }
+
+  .calculator-section h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding-top: 60px;
+  }
+
+  .calculator {
+    gap: 20px;
+  }
+
+  input,
+select {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 6px;
+    font-size: 12px;
+  }
+
+  .investor {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .investor .text h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .investor .text p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .team-image img {
+    width: 150px;
+    height: 110px;
+  }
+
+  .Refferal {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .Refferal .text h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .st-button button {
+    padding: 0.6em 2em;
+    font-size: 12px;
+  }
+
+  .Choose {
+    padding-top: 60px;
+  }
+
+  .Choose .text h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .Choose .text p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .center-image img {
+    width: 150px;
+  }
+
+  .stats {
+    padding: 30px 10px;
+  }
+
+  .stat-card {
+    max-width: 250px;
+    height: 160px;
+  }
+
+  .number span {
+    font-size: 40px;
+  }
+
+  .stat-card p {
+    font-size: 10px;
+  }
+
+  .transaction-box h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  td img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .working-process h4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .working-process p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .working-process h5 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .steps .circle::before {
+    width: 70px;
+    height: 70px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .faq-box {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .faq-box h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .faq-box p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .faq-question .icon {
+    font-size: 16px;
+  }
+
+  .download-section {
+    padding: 30px 10px;
+  }
+
+  .right h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .right p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .android h4,
+.ios h4 {
+    font-size: 0.9rem;
+  }
+
+  .android li,
+.ios li {
+    font-size: 0.8rem;
+  }
+
+  .buttons-f button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .feedback {
+    margin-top: 80px;
+  }
+
+  .feedback-section h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .feedback-section p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .feedback .circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .small {
+    width: 50px;
+    height: 50px;
+  }
+
+  .text-section {
+    margin-top: 40px;
+  }
+
+  .text-section h3,
+.text-section p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .blog-section {
+    padding-top: 80px;
+  }
+
+  .blog-text h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .blog-text p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .news-card {
+    max-width: 200px;
+  }
+
+  .news-card img {
+    height: 120px;
+  }
+
+  .news-card h3 {
+    font-size: 16px;
+  }
+
+  .news-card p {
+    font-size: 12px;
+  }
+
+  .foot-bg {
+    padding-top: 40px;
+  }
+
+  .foot-logo img {
+    width: 80%;
+  }
+
+  .footer-section {
+    max-width: 250px;
+  }
+
+  .footer-section h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .footer-section p,
+.footer-section ul li a {
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+
+  .social-footer {
+    padding: 10px 10px;
+    gap: 10px;
+  }
+
+  .socialContainer {
+    width: 35px;
+    height: 35px;
+  }
+
+  .support-footer {
+    gap: 5px;
+  }
+
+  .card1,
+.card2,
+.card3,
+.card4 {
+    width: 50px;
+    height: 50px;
+  }
+}
