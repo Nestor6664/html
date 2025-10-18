@@ -1,28 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пошук фільмів</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Поиск фильмов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1739405858683-4d392f2cab83?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            background-color: #222;
+            color: white;
+        }
+        .filters { width: 250px; padding: 20px; background: #333; border-radius: 8px; margin-right: 20px; }
+        .main-content { flex: 1; }
+        .search-form { margin-bottom: 20px; display: flex; gap: 10px; }
+        input, select { padding: 8px 12px; border: 1px solid #555; border-radius: 4px; background-color: #444; color: white; }
+        button { padding: 8px 12px; background: #0066cc; color: white; cursor: pointer; border: none; border-radius: 4px; margin-bottom: 12px; }
+        button:hover { background: #0052a3; }
+        .movie-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+        .movie-item { border: 1px solid #444; padding: 10px; border-radius: 4px; text-align: center; background-color: #333; }
+        .movie-item h3, .movie-item p, .movie-item .genres { color: white; }
+        .movie-item img { max-width: 100%; height: auto; }
+        .pagination { display: flex; gap: 5px; margin-top: 20px; }
+        .genre-filter { margin-bottom: 15px; }
+        .genre-options { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+        .genre-option { background: #555; padding: 3px 8px; border-radius: 12px; font-size: 12px; cursor: pointer; color: white; }
+        .genre-option.selected { background: #0066cc; color: white; }
+    </style>
 </head>
-<body>
-    <h1>Пошук фільмів</h1>
-    <form id="searchForm">
-        <input type="text" id="searchTitle" placeholder="введіть назву фільму" required>
-        <select id="type">
-            <option value="movie">Фільми</option>
-            <option value="series">Серіали</option>
-            <option value="episode">епізоди</option>
-        </select>
-        <button type="submit">Пошук</button>
-    </form>
+<body> 
+    <div class="filters">
+        <h3>Фильтры</h3>
+        <form id="filterForm">
+            <div style="margin-bottom: 15px;">
+                <label for="type">Тип:</label><br>
+                <select id="type">
+                    <option value="movie">Фильмы</option>
+                    <option value="series">Сериалы</option>
+                </select>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="year">Год:</label><br>
+                <input type="number" id="year" placeholder="Например: 2020">
+            </div>
+            <div class="genre-filter">
+                <label>Жанр:</label>
+                <div class="genre-options">
+                    <div class="genre-option" data-genre="action">Боевик</div>
+                    <div class="genre-option" data-genre="comedy">Комедия</div>
+                    <div class="genre-option" data-genre="drama">Драма</div>
+                    <div class="genre-option" data-genre="horror">Ужасы</div>
+                    <div class="genre-option" data-genre="sci-fi">Фантастика</div>
+                    <div class="genre-option" data-genre="fantasy">Фэнтези</div>
+                    <div class="genre-option" data-genre="romance">Романтика</div>
+                    <div class="genre-option" data-genre="thriller">Триллер</div>
+                    <div class="genre-option" data-genre="animation">Мультфильм</div>
+                </div>
+            </div>
+            <div style="margin-bottom: 15px;">
+                <label for="sort">Сортировка:</label><br>
+                <select id="sort">
+                    <option value="">По умолчанию</option>
+                    <option value="newest">Сначала новые</option>
+                    <option value="oldest">Сначала старые</option>
+                </select>
+            </div>
+            <button type="button" id="applyFilters">Применить фильтры</button>
+        </form>
+    </div>
 
-    <div id="movieContainer"></div>
-    <div id="paginationContainer"></div>
-    <div id="movieDetails" class="details" style="display: none;"></div>
+    <div class="main-content">
+        <h1>Поиск фильмов</h1>
+        <button id="showFavorites">Мои Улюблені</button>
+        <div id="favoritesList" class="movie-container" style="margin-top:20px; display:none;"></div>
 
-    <script src="assets/js/script.js">
+        <div class="search-form">
+            <input type="text" id="searchTitle" placeholder="Введите название..." style="flex: 1;">
+            <button type="submit" id="searchButton">Найти</button>
+        </div>
+
+        <div id="movieContainer" class="movie-container"></div>
+        <div id="paginationContainer" class="pagination"></div>
+    </div>
+
+    <script>
+        const API_KEY = '7add6263';
+        const BASE_URL = 'https://www.omdbapi.com/';
+        const searchButton = document.getElementById('searchButton');
+        const applyFilters = document.getElementById('applyFilters');
+        const movieContainer = document.getElementById('movieContainer');
+        const paginationContainer = document.getElementById('paginationContainer');
+        const genreOptions = document.querySelectorAll('.genre-option');
+
+        let currentPage = 1;
+        let currentSearch = '';
+        let currentType = 'movie';
+        let currentYear = '';
+        let currentSort = '';
+        let allMovies = [];
+
+        let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+        function saveFavorites() {
+            localStorage.setItem("favorites", JSON.stringify(favorites));
+        }
+
+        function toggleFavorite(movie) {
+            const exists = favorites.some(f => f.imdbID === movie.imdbID);
+            if (exists) {
+                favorites = favorites.filter(f => f.imdbID !== movie.imdbID);
+            } else {
+                favorites.push(movie);
+            }
+            saveFavorites();
+            renderFavorites();
+            displayMovies({ Response: 'True', Search: allMovies });
+        }
+
+        function renderFavorites() {
+            const list = document.getElementById("favoritesList");
+            list.innerHTML = "";
+            if (favorites.length === 0) {
+                list.innerHTML = "<p>Нет любимых фильмов</p>";
+                return;
+            }
+            favorites.forEach(movie => {
+                const movieDiv = document.createElement("div");
+                movieDiv.className = "movie-item";
+                movieDiv.innerHTML = `
+                    <img src="${movie.Poster}" alt="${movie.Title}">
+                    <h3>${movie.Title}</h3>
+                    <p>${movie.Year}</p>
+                    <button onclick="goToDetailsPage('${movie.imdbID}')">Детали</button>
+                    <button onclick='toggleFavorite(${JSON.stringify(movie)})'>❌ Удалить</button>
+                `;
+                list.appendChild(movieDiv);
+            });
+        }
+
+        document.getElementById("showFavorites").addEventListener("click", () => {
+            const block = document.getElementById("favoritesList");
+            block.style.display = block.style.display === "none" ? "grid" : "none";
+            renderFavorites();
+        });
+
+        async function fetchMovies() {
+            let url = `${BASE_URL}?apikey=${API_KEY}&s=${encodeURIComponent(currentSearch)}&type=${currentType}&page=${currentPage}`;
+            if (currentYear) url += `&y=${currentYear}`;
+            const response = await fetch(url);
+            const data = await response.json();
+            if (data.Response === 'True') {
+                const detailedMovies = await Promise.all(data.Search.map(async movie => {
+                    const detailsResponse = await fetch(`${BASE_URL}?apikey=${API_KEY}&i=${movie.imdbID}`);
+                    return detailsResponse.json();
+                }));
+                allMovies = detailedMovies;
+                return { ...data, Search: detailedMovies };
+            }
+            return data;
+        }
+
+        function updateFilters() {
+            currentType = document.getElementById('type').value;
+            currentYear = document.getElementById('year').value;
+            currentSort = document.getElementById('sort').value;
+        }
+
+        genreOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                option.classList.toggle('selected');
+                applyGenreFilter();
+            });
+        });
+
+        function applyGenreFilter() {
+            const selectedGenres = Array.from(document.querySelectorAll('.genre-option.selected'))
+                                      .map(el => el.dataset.genre);
+            if (selectedGenres.length === 0) {
+                displayMovies({ Response: 'True', Search: allMovies });
+                return;
+            }
+            const filteredMovies = allMovies.filter(movie => {
+                const movieGenres = movie.Genre ? movie.Genre.toLowerCase().split(', ') : [];
+                return selectedGenres.some(genre => movieGenres.includes(genre));
+            });
+            displayMovies({ Response: 'True', Search: filteredMovies });
+        }
+
+        searchButton.addEventListener('click', async () => {
+            currentSearch = document.getElementById('searchTitle').value.trim();
+            currentPage = 1;
+            if (!currentSearch) {
+                movieContainer.innerHTML = '<p>Введите название</p>';
+                return;
+            }
+            try {
+                const data = await fetchMovies();
+                displayMovies(data);
+            } catch (error) {
+                movieContainer.innerHTML = '<p>Ошибка поиска</p>';
+            }
+        });
+
+        applyFilters.addEventListener('click', async () => {
+            updateFilters();
+            if (currentSearch) {
+                currentPage = 1;
+                try {
+                    const data = await fetchMovies();
+                    displayMovies(data);
+                } catch (error) {
+                    movieContainer.innerHTML = '<p>Ошибка фильтрации</p>';
+                }
+            }
+        });
+
+        function displayMovies(data) {
+            movieContainer.innerHTML = '';
+            paginationContainer.innerHTML = '';
+            if (data.Response === 'True') {
+                let results = data.Search;
+                if (currentSort === 'newest') {
+                    results.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
+                } else if (currentSort === 'oldest') {
+                    results.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
+                }
+                results.forEach(movie => {
+                    const isFav = favorites.some(f => f.imdbID === movie.imdbID);
+                    const movieDiv = document.createElement('div');
+                    movieDiv.className = 'movie-item';
+                    movieDiv.innerHTML = `
+                        <img src="${movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/200'}" alt="${movie.Title}">
+                        <h3>${movie.Title}</h3>
+                        <p>${movie.Year}</p>
+                        ${movie.Genre ? `<p class="genres">${movie.Genre}</p>` : ''}
+                        <button onclick="goToDetailsPage('${movie.imdbID}')">Детали</button>
+                        <button onclick='toggleFavorite(${JSON.stringify(movie)})'>${isFav ? "❌ Убрать" : "❤️ В избранное"}</button>
+                    `;
+                    movieContainer.appendChild(movieDiv);
+                });
+            } else {
+                movieContainer.innerHTML = '<p>Ничего не найдено</p>';
+            }
+        }
+
+        function goToDetailsPage(imdbID) {
+            window.location.href = `details.html?id=${imdbID}`;
+        }
+    </script>
+
+<script>
+    const filmLetters = ["🎬", "🎥", "⭐", "🍿", "🎞", "🎭", "📽", "C", "I", "N", "E", "M", "A"];
+    
+    let lastTime = 0;
+    
+    document.addEventListener("mousemove", (e) => {
+        const now = Date.now();
+        if (now - lastTime < 120) return;
+        lastTime = now;
+    
+        const span = document.createElement("span");
+        span.textContent = filmLetters[Math.floor(Math.random() * filmLetters.length)];
+        span.style.position = "fixed";
+        span.style.left = e.pageX + "px";
+        span.style.top = e.pageY + "px";
+        span.style.pointerEvents = "none";
+        span.style.fontSize = Math.random() * 15 + 10 + "px";
+        span.style.fontWeight = "bold";
+        span.style.color = "rgba(255,255,255,0.8)";
+        span.style.textShadow = "0 0 5px #00f, 0 0 10px #0ff";
+        span.style.transform = `rotate(${Math.random() * 40 - 20}deg)`;
+        document.body.appendChild(span);
+    
+        
+        setTimeout(() => {
+            span.style.transition = "all 1s ease-out";
+            span.style.opacity = "0";
+            span.style.transform += " translateY(-30px)";
+        }, 50);
+     
+        
+        setTimeout(() => {
+            span.remove();
+        }, 1000);
+    });
     </script>
 </body>
 </html>
+
+
+    

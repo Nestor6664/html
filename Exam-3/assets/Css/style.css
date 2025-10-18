@@ -432,6 +432,7 @@ header {
   transform: scale(1.02);
 }
 .pricing-table .card:hover .price::before {
+  -webkit-animation: text-hover 1s ease-in-out infinite normal;
   animation: text-hover 1s ease-in-out infinite normal;
 }
 .pricing-table .card:hover .plan::before {
@@ -450,6 +451,17 @@ header {
   transform: translate(-50%, 0%);
 }
 
+@-webkit-keyframes text-hover {
+  0% {
+    right: -30%;
+  }
+  50% {
+    right: -37%;
+  }
+  100% {
+    right: -30%;
+  }
+}
 @keyframes text-hover {
   0% {
     right: -30%;
@@ -589,6 +601,8 @@ select {
   transition: all 0.3s ease-in-out;
   background-color: #2e2e47;
   color: white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   cursor: pointer;
   box-shadow: 0px 0px 5px rgba(108, 99, 255, 0.5);
@@ -736,6 +750,7 @@ label {
 }
 
 .team-image {
+  -webkit-mask-image: url(../images/team-shape.png);
   mask-image: url(../images/team-shape.png);
   -webkit-mask-size: 100% 101%;
   -webkit-mask-repeat: no-repeat;
@@ -747,6 +762,7 @@ label {
 .team-image img {
   width: 295.31px;
   height: 209.483px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -842,6 +858,7 @@ label {
   height: 100%;
   width: 100%;
   background-color: var(--glow-spread-color);
+  -webkit-filter: blur(2em);
   filter: blur(2em);
   opacity: 0.7;
   transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
@@ -871,9 +888,7 @@ label {
   height: 80px;
   top: 0;
   left: 0;
-  -webkit-transform: skewY(-4.5deg);
   transform: skewY(-4.5deg);
-  -webkit-transform-origin: left top;
   transform-origin: left top;
 }
 
@@ -885,9 +900,7 @@ label {
   height: 80px;
   top: 0;
   right: 0;
-  -webkit-transform: skewY(4.5deg);
   transform: skewY(4.5deg);
-  -webkit-transform-origin: right top;
   transform-origin: right top;
 }
 
@@ -1037,9 +1050,7 @@ label {
   height: 80px;
   bottom: -80px;
   left: 0;
-  -webkit-transform: skewY(4.5deg);
   transform: skewY(4.5deg);
-  -webkit-transform-origin: right top;
   transform-origin: right top;
   z-index: 1;
 }
@@ -1052,9 +1063,7 @@ label {
   height: 80px;
   bottom: -80px;
   right: 0;
-  -webkit-transform: skewY(-4.5deg);
   transform: skewY(-4.5deg);
-  -webkit-transform-origin: left top;
   transform-origin: left top;
   z-index: 1;
 }
@@ -1241,6 +1250,7 @@ td img {
   top: 35%;
   left: 39%;
   transform-origin: -52px 0;
+  -webkit-animation: rotateDot 5s linear infinite;
   animation: rotateDot 5s linear infinite;
 }
 
@@ -1256,6 +1266,14 @@ td img {
   background-color: #00c2ff;
 }
 
+@-webkit-keyframes rotateDot {
+  0% {
+    transform: rotate(0deg) translate(52px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(52px) rotate(-360deg);
+  }
+}
 @keyframes rotateDot {
   0% {
     transform: rotate(0deg) translate(52px) rotate(0deg);
@@ -1573,6 +1591,7 @@ td img {
 .feedback .circle img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   transition: 0.5s ease-in-out;
 }
@@ -1701,6 +1720,7 @@ td img {
 .news-card img {
   width: 100%;
   height: 180px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -1741,6 +1761,7 @@ td img {
 .news-card img {
   width: 100%;
   height: 180px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -1980,9 +2001,20 @@ td img {
 }
 
 .socialContainer:hover .socialSvg {
+  -webkit-animation: slide-in-top 0.3s both;
   animation: slide-in-top 0.3s both;
 }
 
+@-webkit-keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes slide-in-top {
   0% {
     transform: translateY(-50px);
@@ -2180,9 +2212,7 @@ td img {
   height: 450px;
   bottom: -450px;
   left: 0;
-  -webkit-transform: skewY(25deg);
   transform: skewY(25deg);
-  -webkit-transform-origin: right top;
   transform-origin: right top;
   z-index: -1;
 }
@@ -2195,9 +2225,7 @@ td img {
   height: 450px;
   bottom: -450px;
   right: 0;
-  -webkit-transform: skewY(-25deg);
   transform: skewY(-25deg);
-  -webkit-transform-origin: left top;
   transform-origin: left top;
   z-index: -1;
 }
@@ -2235,6 +2263,7 @@ td img {
 .card-investor img {
   width: 320px;
   height: 300px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -2280,9 +2309,7 @@ td img {
   position: absolute;
   left: 0;
   top: -19px;
-  -webkit-transform: skewY(-6deg);
   transform: skewY(-6deg);
-  -webkit-transform-origin: right top;
   transform-origin: right top;
   z-index: -1;
 }
@@ -2295,9 +2322,7 @@ td img {
   position: absolute;
   right: 0;
   top: -19px;
-  -webkit-transform: skewY(6deg);
   transform: skewY(6deg);
-  -webkit-transform-origin: left top;
   transform-origin: left top;
   z-index: -1;
 }
@@ -2353,6 +2378,7 @@ td img {
 .blog9-card img {
   width: 100%;
   height: 200px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -2506,6 +2532,8 @@ textarea {
   padding: 20px;
   border-radius: 8px;
   margin-right: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   max-height: calc(150vh - 40px);
 }
@@ -3252,10 +3280,6 @@ textarea {
     text-align: center;
   }
 
-  .feature .icon img {
-    width: 50px;
-  }
-
   .calculator-section h3 {
     font-size: 2.5rem;
     line-height: 3rem;
@@ -3603,6 +3627,7 @@ select {
   }
 
   .team-image {
+    -webkit-mask-image: url(../images/team-shape.png);
     mask-image: url(../images/team-shape.png);
     -webkit-mask-size: 100% 100%;
   }
@@ -3701,10 +3726,6 @@ select {
   .Secure-content p {
     font-size: 0.9rem;
     line-height: 1.5rem;
-  }
-
-  .feature .icon img {
-    width: 40px;
   }
 
   .calculator-section h3 {
