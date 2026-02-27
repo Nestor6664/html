@@ -1,0 +1,69 @@
+═══════════════════════════════════════════════════════════
+  JAK URUCHOMIĆ ZADANIA - SZYBKI PRZEWODNIK
+═══════════════════════════════════════════════════════════
+
+METODA 1: Użyj pliku uruchom.bat (najłatwiejsze)
+─────────────────────────────────────────────────
+1. Kliknij dwukrotnie na plik "uruchom.bat"
+2. Wybierz numer zadania z menu
+3. Naciśnij Enter
+
+METODA 2: Z terminala PowerShell
+─────────────────────────────────────────────────
+Otwórz PowerShell w tym folderze i wpisz:
+
+  python zadanie_1.py    (dla zadania 1)
+  python zadanie_2.py    (dla zadania 2)
+  python zadanie_3.py    (dla zadania 3)
+  itd...
+
+METODA 3: Z VS Code lub innego edytora
+─────────────────────────────────────────────────
+1. Otwórz plik .py w edytorze
+2. Naciśnij F5 lub kliknij przycisk "Run"
+3. Wynik zobaczysz w konsoli
+
+METODA 4: Wszystkie zadania naraz
+─────────────────────────────────────────────────
+  python main.py
+
+═══════════════════════════════════════════════════════════
+
+ZADANIA AUTOMATYCZNE (nie wymagają wprowadzenia danych):
+──────────────────────────────────────────────────────────
+✓ Zadanie 1 - Kontrola paliwa
+✓ Zadanie 2 - Liczby pierwsze  
+✓ Zadanie 3 - Lista adresów
+✓ Zadanie 5 - Lista liczb
+✓ Zadanie 8 - Praca z łańcuchem
+
+ZADANIA INTERAKTYWNE (wymagają wprowadzenia danych):
+────────────────────────────────────────────────────
+⚠ Zadanie 4 - Rachunek (liczba gości, dań, ceny)
+⚠ Zadanie 6 - Pętla (wprowadzaj liczby)
+⚠ Zadanie 7A - Średnia punktów (liczba studentów, punkty)
+⚠ Zadanie 7B - Średnia punktów (liczba studentów, punkty)
+⚠ Zadanie 9 - Programy z łańcuchami (imię, wiek, itp.)
+
+═══════════════════════════════════════════════════════════
+
+PRZYKŁADOWE URUCHOMIENIE:
+──────────────────────────────────────────────────────────
+W PowerShell wpisz:
+  python zadanie_1.py
+
+Otrzymasz:
+  Pozostało 100 litrów paliwa.
+  Pozostało 90 litrów paliwa.
+  ...
+  Konie lotu.
+
+═══════════════════════════════════════════════════════════
+
+UWAGA: Jeśli "python" nie działa, spróbuj:
+  py zadanie_1.py
+  lub
+  python3 zadanie_1.py
+
+═══════════════════════════════════════════════════════════
+
